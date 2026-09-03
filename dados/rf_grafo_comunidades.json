@@ -1,0 +1,3849 @@
+{
+  "Clusters": {
+    "Class Benign": [
+      "ack_count > 5.5",
+      "Class Benign",
+      "Number <= 10.5",
+      "ack_flag_number > 0.35",
+      "Tot size > 350.75",
+      "Variance <= 571308.56",
+      "rst_flag_number <= 0.1",
+      "Time_To_Live <= 202.1",
+      "Tot size > 62.95",
+      "Variance > 92557.64",
+      "psh_flag_number <= 0.2",
+      "Variance > 571308.56",
+      "ack_count <= 15.0",
+      "HTTPS > 0.4",
+      "Std <= 573.92",
+      "Max <= 301.5",
+      "HTTP <= 0.05",
+      "Max <= 1501.5",
+      "HTTPS > 0.55",
+      "Std <= 346.63",
+      "IAT <= 0.05",
+      "Variance > 2813.51",
+      "AVG > 92.05",
+      "AVG <= 202.2",
+      "Max <= 1502.5",
+      "Tot sum > 3655.0",
+      "psh_flag_number <= 0.37",
+      "Max > 1502.5",
+      "Tot sum > 2199.5",
+      "psh_flag_number <= 0.35",
+      "Header_Length > 11.0",
+      "Tot size > 62.65",
+      "Time_To_Live > 63.35",
+      "Variance <= 831186.41",
+      "Max > 1501.5",
+      "Time_To_Live > 61.95",
+      "Tot size <= 198.05",
+      "Tot size <= 289.8",
+      "Variance > 580973.53",
+      "Number <= 11.0",
+      "Header_Length > 26.2",
+      "UDP <= 0.15",
+      "AVG > 781.85",
+      "Variance <= 92557.64",
+      "Rate <= 214.21",
+      "HTTPS <= 0.55",
+      "Time_To_Live <= 221.25",
+      "Rate <= 3729.12",
+      "fin_flag_number <= 0.15",
+      "Tot size <= 60.3",
+      "ARP <= 0.5",
+      "Time_To_Live > 62.85",
+      "Rate > 57.68"
+    ],
+    "Class DoS/DDoS": [
+      "ack_flag_number > 0.1",
+      "Header_Length <= 32.6",
+      "Std <= 28.22",
+      "rst_flag_number <= 0.15",
+      "Tot size <= 77.0",
+      "HTTPS > 0.35",
+      "Rate <= 39547.11",
+      "Min > 59.0",
+      "fin_flag_number <= 0.05",
+      "syn_count <= 0.5",
+      "ack_count <= 10.5",
+      "AVG <= 206.35",
+      "Tot sum <= 3520.0",
+      "syn_flag_number <= 0.05",
+      "Time_To_Live > 69.8",
+      "IAT > 0.0",
+      "HTTP <= 0.25",
+      "fin_count <= 1.5",
+      "syn_flag_number <= 0.15",
+      "Std > 598.22",
+      "DNS <= 0.05",
+      "HTTPS > 0.15",
+      "Max > 1507.0",
+      "ack_count > 0.5",
+      "syn_flag_number > 0.1",
+      "rst_count <= 9.5",
+      "syn_count > 9.5",
+      "Number > 21.0",
+      "Class DoS/DDoS",
+      "AVG > 72.55",
+      "DHCP <= 0.05",
+      "psh_flag_number > 0.05",
+      "Rate <= 335.24",
+      "Time_To_Live <= 139.05",
+      "HTTPS > 0.45",
+      "Max > 153.5",
+      "Header_Length > 11.8",
+      "Header_Length <= 29.4",
+      "Max <= 1493.5",
+      "Max <= 1513.0",
+      "HTTPS > 0.1",
+      "Variance <= 562976.78",
+      "Tot sum <= 30949.0",
+      "Time_To_Live > 66.0",
+      "Time_To_Live <= 232.25",
+      "ICMP <= 0.05",
+      "Std > 448.37",
+      "UDP <= 0.14",
+      "Std <= 755.85",
+      "Number <= 22.0",
+      "Header_Length > 20.38",
+      "syn_count > 0.5",
+      "syn_count > 10.5",
+      "Header_Length > 23.8",
+      "Variance > 623806.34",
+      "ARP <= 0.05",
+      "Min <= 970.5",
+      "IPv > 0.85",
+      "Min <= 154.0",
+      "Variance <= 3350968.12",
+      "Max > 2958.0",
+      "Std <= 1833.38",
+      "ack_count > 1.5",
+      "syn_count <= 4.5",
+      "Number <= 55.0",
+      "Rate <= 1355.55",
+      "psh_flag_number <= 0.25",
+      "Header_Length <= 33.0",
+      "Rate > 121.29",
+      "IRC <= 0.05",
+      "syn_count <= 1.5",
+      "Tot sum > 631.0",
+      "fin_count <= 0.5",
+      "Tot size <= 204.45",
+      "IAT <= 0.01",
+      "TCP > 0.1",
+      "Tot sum > 591.5",
+      "ack_flag_number <= 0.55",
+      "Tot size <= 546.4",
+      "Rate > 38.11",
+      "ack_flag_number <= 0.95",
+      "ack_flag_number > 0.55",
+      "Variance > 198750.05",
+      "Tot sum <= 5999.0",
+      "AVG > 62.65",
+      "ack_count > 8.5",
+      "Tot sum > 653.0",
+      "Tot sum <= 8403.0",
+      "Rate > 136.08",
+      "AVG <= 201.35",
+      "Max > 1513.0",
+      "rst_count <= 0.5",
+      "Rate <= 3265.26",
+      "ack_count > 10.5",
+      "Rate <= 1319.67",
+      "Header_Length > 21.4",
+      "HTTPS > 0.05",
+      "Tot sum <= 3514.0",
+      "Time_To_Live <= 241.65",
+      "syn_flag_number <= 0.1",
+      "Variance > 680547.12",
+      "TCP > 0.5",
+      "Tot size > 790.65",
+      "Rate <= 561.46",
+      "Min <= 61.0",
+      "Max <= 64.0",
+      "Time_To_Live <= 78.33",
+      "ack_count > 13.0",
+      "ARP <= 0.0",
+      "Tot size > 62.99",
+      "Min <= 1244.0",
+      "Min <= 1507.0",
+      "Tot size > 138.05",
+      "Variance > 173096.54",
+      "AVG > 63.4",
+      "Header_Length > 7.98",
+      "Tot sum > 15087.0",
+      "Rate <= 9671.28",
+      "Min <= 72.0",
+      "IAT <= 0.03",
+      "rst_count <= 1.5",
+      "AVG <= 204.45",
+      "Max <= 1502.0",
+      "HTTPS <= 0.95",
+      "Tot sum <= 35426.0",
+      "ack_flag_number <= 0.81",
+      "Number > 10.5",
+      "Variance <= 16.85",
+      "Number > 22.0",
+      "Tot sum <= 6001.0",
+      "Max > 1493.5",
+      "fin_flag_number <= 0.0",
+      "Rate > 47.19",
+      "TCP > 0.3",
+      "HTTPS <= 0.1",
+      "Tot sum > 2495.5",
+      "Std > 355.28",
+      "Min <= 1504.0",
+      "ack_flag_number > 0.85",
+      "psh_flag_number <= 0.45",
+      "Header_Length > 12.4",
+      "Max <= 5051.5",
+      "Tot sum <= 9140.0",
+      "Time_To_Live > 69.85",
+      "TCP <= 0.35",
+      "Std > 0.63",
+      "Variance <= 157684.25",
+      "psh_flag_number <= 0.33",
+      "Header_Length > 21.8",
+      "Max <= 1499.0",
+      "Header_Length <= 33.8",
+      "syn_flag_number <= 0.0",
+      "Tot size <= 295.8",
+      "ack_flag_number > 0.67",
+      "Max <= 1507.0",
+      "Std <= 587.83",
+      "fin_flag_number <= 0.1",
+      "ack_flag_number > 0.81",
+      "Tot size <= 63.55",
+      "ack_count > 22.0",
+      "ICMP <= 0.0",
+      "Max > 64.0",
+      "Number > 13.0",
+      "Time_To_Live <= 193.0",
+      "Tot sum > 5999.0",
+      "Min > 64.0",
+      "Rate > 109.13",
+      "psh_flag_number <= 0.55",
+      "Time_To_Live <= 220.45",
+      "SSH <= 0.15",
+      "Time_To_Live > 62.65",
+      "Header_Length <= 32.4",
+      "Rate <= 15745.77",
+      "HTTPS > 0.2",
+      "Time_To_Live <= 216.1",
+      "Max > 2931.5",
+      "Std > 755.98",
+      "UDP <= 0.55",
+      "rst_flag_number <= 0.05",
+      "Tot sum > 7960.5",
+      "Max > 2874.0",
+      "HTTPS > 0.25",
+      "Time_To_Live > 62.45",
+      "Rate <= 1765.69",
+      "Std > 755.85",
+      "Tot sum <= 35794.0",
+      "AVG > 206.35",
+      "AVG <= 3404.2",
+      "Rate > 329.77",
+      "Tot sum > 9140.0",
+      "Std > 426.91",
+      "Max <= 655.5",
+      "Tot size > 58.0",
+      "psh_flag_number <= 0.1",
+      "Tot sum > 10816.0",
+      "Time_To_Live <= 219.5",
+      "Rate <= 14492.19",
+      "ece_flag_number <= 0.05",
+      "Tot sum <= 34688.0",
+      "Header_Length > 24.66",
+      "ack_flag_number > 0.95",
+      "AVG > 216.4",
+      "Rate <= 10256.96",
+      "Tot sum <= 15205.0",
+      "Time_To_Live <= 158.55",
+      "psh_flag_number <= 0.22",
+      "Time_To_Live > 63.43",
+      "Max > 1512.0",
+      "Tot size > 63.55",
+      "Tot sum > 5965.5",
+      "Std > 124.64",
+      "Header_Length <= 7.18",
+      "AVG > 74.74",
+      "Std <= 626.26",
+      "Std <= 585.28",
+      "AVG > 515.7",
+      "Std > 585.28",
+      "Number > 18.0",
+      "Tot size <= 138.05",
+      "Protocol Type > 11.5",
+      "Min > 77.0",
+      "Tot sum > 1337.0",
+      "Rate > 1388.34",
+      "Number > 55.0",
+      "fin_count > 0.5",
+      "Tot size <= 92.6",
+      "Min <= 786.0",
+      "Min > 57.5",
+      "Tot sum > 639.0",
+      "IAT <= 0.04",
+      "Tot sum > 35794.0",
+      "Max <= 8369.0",
+      "ack_flag_number <= 1.0",
+      "Min <= 77.0",
+      "HTTPS <= 0.0",
+      "ack_flag_number > 0.59",
+      "AVG <= 593.51",
+      "AVG <= 515.7",
+      "Time_To_Live > 61.78",
+      "Std > 4.43",
+      "Variance > 19.97",
+      "Max > 195.5",
+      "Number > 62.0",
+      "Protocol Type <= 11.5",
+      "psh_flag_number > 0.1",
+      "ack_count > 12.5",
+      "UDP > 0.75",
+      "Tot sum > 609.5",
+      "Max <= 1274.0",
+      "Rate <= 3182.08",
+      "Header_Length > 28.2",
+      "Number <= 12.0",
+      "Variance <= 534782.66",
+      "Header_Length <= 28.2",
+      "TCP <= 0.3",
+      "ARP > 0.0",
+      "Header_Length <= 21.18",
+      "Max > 655.5",
+      "UDP <= 0.59",
+      "Max > 1505.0",
+      "ack_flag_number <= 0.63",
+      "Time_To_Live <= 87.6",
+      "Number > 27.5",
+      "Tot size <= 1541.55",
+      "psh_flag_number <= 0.26",
+      "Rate > 1355.55",
+      "ack_count > 3.5",
+      "Header_Length <= 24.74",
+      "Tot sum > 5878.0",
+      "Time_To_Live <= 78.17",
+      "Tot size <= 985.99",
+      "Std <= 667.95",
+      "Variance <= 372531.17",
+      "Rate <= 240.87",
+      "Header_Length > 9.8",
+      "UDP <= 0.85",
+      "Tot size <= 266.5",
+      "AVG > 64.35",
+      "AVG <= 458.2",
+      "Max > 1511.0",
+      "Tot sum > 3520.0",
+      "AVG > 499.45",
+      "Time_To_Live > 62.25",
+      "AVG <= 2074.3",
+      "Number <= 18.0",
+      "Variance > 396943.52",
+      "Tot sum > 35426.0",
+      "Std <= 1985.01",
+      "Std <= 1032.24",
+      "ack_flag_number > 0.39",
+      "Variance <= 574705.44",
+      "Header_Length <= 11.88",
+      "UDP > 0.58",
+      "UDP <= 1.0",
+      "Std <= 222.26",
+      "DNS <= 0.09",
+      "Min > 57.0",
+      "Std <= 12.13",
+      "Std <= 755.98",
+      "UDP <= 0.58",
+      "Std <= 90.03",
+      "ack_count <= 0.5",
+      "HTTPS <= 0.11",
+      "IPv > 0.81",
+      "Max > 803.5",
+      "Variance > 322767.88",
+      "Variance <= 396943.52",
+      "HTTPS <= 0.2",
+      "Header_Length <= 22.1",
+      "Number > 11.0",
+      "Rate > 869.07",
+      "Std <= 4.43",
+      "Std > 90.03",
+      "Number > 21.5",
+      "syn_flag_number > 0.0",
+      "AVG > 599.41",
+      "Tot sum > 15003.0",
+      "Tot sum > 14232.0",
+      "Header_Length <= 7.98",
+      "Tot sum > 8559.0",
+      "UDP <= 0.97",
+      "Variance <= 1.03",
+      "Time_To_Live > 63.45",
+      "TCP > 0.35",
+      "Time_To_Live > 49.1",
+      "Number > 11.5",
+      "Variance > 0.02",
+      "AVG <= 351.81",
+      "Tot sum > 4822.0",
+      "IPv > 0.91",
+      "Number > 12.0",
+      "Min > 56.5",
+      "AVG > 63.44",
+      "Max > 366.5",
+      "IPv <= 1.0",
+      "ack_count <= 1.5",
+      "AVG <= 666.06",
+      "Tot sum > 6001.0",
+      "Tot sum > 26071.0",
+      "HTTP <= 0.82",
+      "Tot sum <= 26071.0",
+      "Max <= 348.5",
+      "Time_To_Live <= 82.45",
+      "Variance <= 226.36",
+      "Tot size > 59.4",
+      "Rate > 2316.01",
+      "Time_To_Live > 57.54",
+      "AVG <= 74.75",
+      "Time_To_Live > 62.6",
+      "ARP <= 0.1",
+      "Variance > 16.85",
+      "AVG > 351.81",
+      "AVG <= 1500.4",
+      "Header_Length <= 14.32",
+      "Tot sum > 21652.5",
+      "Time_To_Live <= 147.4",
+      "Header_Length > 11.88",
+      "TCP <= 0.1",
+      "Time_To_Live > 61.2",
+      "Time_To_Live <= 72.19",
+      "Tot size <= 956.8",
+      "Time_To_Live > 59.27",
+      "AVG <= 63.4",
+      "ack_flag_number <= 0.06",
+      "AVG <= 63.44",
+      "Header_Length <= 20.9",
+      "Variance <= 0.02",
+      "ack_flag_number <= 0.1",
+      "Tot size <= 721.5",
+      "Tot size <= 62.99",
+      "Number > 12.5",
+      "LLC > 0.94",
+      "Number > 16.0",
+      "Variance <= 11647.6",
+      "Rate <= 181063.55",
+      "Std <= 124.64",
+      "Max <= 803.5",
+      "Telnet <= 0.0",
+      "Rate > 1147.0",
+      "Tot sum > 5965.0",
+      "ack_count <= 3.5",
+      "Rate > 669.21",
+      "Tot size <= 970.98",
+      "LLC > 0.86",
+      "Rate > 91.99",
+      "AVG <= 599.41",
+      "Rate > 1319.67",
+      "ack_flag_number <= 0.59",
+      "Tot size <= 958.05",
+      "Variance <= 398961.84",
+      "Time_To_Live <= 95.87",
+      "DNS <= 0.17",
+      "Min > 48.0",
+      "Header_Length <= 20.38",
+      "Time_To_Live <= 69.8",
+      "IRC <= 0.0"
+    ],
+    "Class Reconnaissance": [
+      "syn_count > 1.5",
+      "HTTPS <= 0.26",
+      "Std <= 55.65",
+      "AVG <= 88.1",
+      "cwr_flag_number <= 0.05",
+      "Header_Length <= 37.6",
+      "Tot sum <= 889.5",
+      "Rate > 62.35",
+      "Class Reconnaissance",
+      "Tot sum > 1377.0",
+      "psh_flag_number <= 0.06"
+    ],
+    "Class Spoofing": [
+      "Tot sum > 618.0",
+      "Tot size <= 90.95",
+      "SSH <= 0.05",
+      "Min <= 59.0",
+      "Class Spoofing",
+      "Time_To_Live <= 161.55",
+      "syn_count <= 3.5",
+      "ack_count <= 11.5",
+      "Tot sum > 3713.0",
+      "Max > 1498.5",
+      "UDP <= 0.75",
+      "IGMP <= 0.0",
+      "Max <= 189.5",
+      "Rate > 397.62",
+      "UDP > 0.97",
+      "Rate > 3145.84",
+      "Tot sum <= 14232.0",
+      "Std <= 605.79",
+      "Std <= 250.07"
+    ],
+    "Ambiguous": []
+  },
+  "Probability": {
+    "ack_flag_number > 0.1": {
+      "Class Benign": 0.22,
+      "Class DoS/DDoS": 0.71,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.04
+    },
+    "Header_Length <= 32.6": {
+      "Class Benign": 0.17,
+      "Class DoS/DDoS": 0.59,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.19
+    },
+    "Std <= 28.22": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.58,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.3
+    },
+    "rst_flag_number <= 0.15": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.58,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.3
+    },
+    "Tot sum > 618.0": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.27,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.61
+    },
+    "Tot size <= 90.95": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.27,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.61
+    },
+    "SSH <= 0.05": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.27,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.61
+    },
+    "Tot size <= 77.0": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.64,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.09
+    },
+    "HTTPS > 0.35": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.64,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.09
+    },
+    "Rate <= 39547.11": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.07
+    },
+    "Min > 59.0": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.07
+    },
+    "fin_flag_number <= 0.05": {
+      "Class Benign": 0.21,
+      "Class DoS/DDoS": 0.59,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.14
+    },
+    "syn_count <= 0.5": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.05
+    },
+    "ack_count <= 10.5": {
+      "Class Benign": 0.16,
+      "Class DoS/DDoS": 0.79,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.04
+    },
+    "AVG <= 206.35": {
+      "Class Benign": 0.3,
+      "Class DoS/DDoS": 0.7,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "ack_count > 5.5": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Number <= 10.5": {
+      "Class Benign": 0.48,
+      "Class DoS/DDoS": 0.43,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.06
+    },
+    "Tot sum <= 3520.0": {
+      "Class Benign": 0.35,
+      "Class DoS/DDoS": 0.47,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.16
+    },
+    "syn_flag_number <= 0.05": {
+      "Class Benign": 0.35,
+      "Class DoS/DDoS": 0.47,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.16
+    },
+    "Min <= 59.0": {
+      "Class Benign": 0.02,
+      "Class DoS/DDoS": 0.11,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.87
+    },
+    "Time_To_Live > 69.8": {
+      "Class Benign": 0.22,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.08
+    },
+    "IAT > 0.0": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "HTTP <= 0.25": {
+      "Class Benign": 0.39,
+      "Class DoS/DDoS": 0.5,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.08
+    },
+    "fin_count <= 1.5": {
+      "Class Benign": 0.3,
+      "Class DoS/DDoS": 0.59,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.06
+    },
+    "syn_flag_number <= 0.15": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.65,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.05
+    },
+    "Std > 598.22": {
+      "Class Benign": 0.33,
+      "Class DoS/DDoS": 0.59,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.04
+    },
+    "DNS <= 0.05": {
+      "Class Benign": 0.33,
+      "Class DoS/DDoS": 0.59,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.04
+    },
+    "HTTPS > 0.15": {
+      "Class Benign": 0.3,
+      "Class DoS/DDoS": 0.58,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.07
+    },
+    "Max > 1507.0": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.69,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.06
+    },
+    "ack_flag_number > 0.35": {
+      "Class Benign": 0.48,
+      "Class DoS/DDoS": 0.43,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.06
+    },
+    "Tot size > 350.75": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Variance <= 571308.56": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "rst_flag_number <= 0.1": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Time_To_Live <= 202.1": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "ack_count > 0.5": {
+      "Class Benign": 0.37,
+      "Class DoS/DDoS": 0.62,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.01
+    },
+    "syn_flag_number > 0.1": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "rst_count <= 9.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "syn_count > 9.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Number > 21.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "AVG > 72.55": {
+      "Class Benign": 0.19,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.09
+    },
+    "DHCP <= 0.05": {
+      "Class Benign": 0.19,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.09
+    },
+    "psh_flag_number > 0.05": {
+      "Class Benign": 0.19,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.09
+    },
+    "Rate <= 335.24": {
+      "Class Benign": 0.19,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.09
+    },
+    "Time_To_Live <= 139.05": {
+      "Class Benign": 0.19,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.09
+    },
+    "HTTPS > 0.45": {
+      "Class Benign": 0.19,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.09
+    },
+    "Max > 153.5": {
+      "Class Benign": 0.21,
+      "Class DoS/DDoS": 0.59,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.14
+    },
+    "Header_Length > 11.8": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.65,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.06
+    },
+    "Header_Length <= 29.4": {
+      "Class Benign": 0.16,
+      "Class DoS/DDoS": 0.79,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.04
+    },
+    "Max <= 1493.5": {
+      "Class Benign": 0.04,
+      "Class DoS/DDoS": 0.96,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Max <= 1513.0": {
+      "Class Benign": 0.12,
+      "Class DoS/DDoS": 0.86,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.01
+    },
+    "Tot size > 62.95": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "HTTPS > 0.1": {
+      "Class Benign": 0.37,
+      "Class DoS/DDoS": 0.53,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.07
+    },
+    "Variance <= 562976.78": {
+      "Class Benign": 0.19,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.09
+    },
+    "Tot sum <= 30949.0": {
+      "Class Benign": 0.18,
+      "Class DoS/DDoS": 0.72,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.04
+    },
+    "Time_To_Live > 66.0": {
+      "Class Benign": 0.18,
+      "Class DoS/DDoS": 0.72,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.04
+    },
+    "Time_To_Live <= 232.25": {
+      "Class Benign": 0.18,
+      "Class DoS/DDoS": 0.72,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.04
+    },
+    "ICMP <= 0.05": {
+      "Class Benign": 0.18,
+      "Class DoS/DDoS": 0.72,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.04
+    },
+    "Std > 448.37": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.69,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.06
+    },
+    "UDP <= 0.14": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.85,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.02
+    },
+    "Variance > 92557.64": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Std <= 755.85": {
+      "Class Benign": 0.07,
+      "Class DoS/DDoS": 0.88,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.04
+    },
+    "Number <= 22.0": {
+      "Class Benign": 0.06,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.27
+    },
+    "Header_Length > 20.38": {
+      "Class Benign": 0.09,
+      "Class DoS/DDoS": 0.84,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.01
+    },
+    "syn_count > 0.5": {
+      "Class Benign": 0.09,
+      "Class DoS/DDoS": 0.84,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.01
+    },
+    "syn_count > 10.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Header_Length > 23.8": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.6,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.11
+    },
+    "Variance > 623806.34": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.6,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.11
+    },
+    "ARP <= 0.05": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.6,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.11
+    },
+    "Min <= 970.5": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.6,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.11
+    },
+    "IPv > 0.85": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.6,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.11
+    },
+    "Min <= 154.0": {
+      "Class Benign": 0.42,
+      "Class DoS/DDoS": 0.46,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.08
+    },
+    "Variance <= 3350968.12": {
+      "Class Benign": 0.42,
+      "Class DoS/DDoS": 0.46,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.08
+    },
+    "Max > 2958.0": {
+      "Class Benign": 0.42,
+      "Class DoS/DDoS": 0.46,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.08
+    },
+    "Std <= 1833.38": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.05
+    },
+    "psh_flag_number <= 0.2": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Variance > 571308.56": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "ack_count <= 15.0": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "ack_count > 1.5": {
+      "Class Benign": 0.13,
+      "Class DoS/DDoS": 0.76,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.08
+    },
+    "syn_count <= 4.5": {
+      "Class Benign": 0.11,
+      "Class DoS/DDoS": 0.54,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.32
+    },
+    "Number <= 55.0": {
+      "Class Benign": 0.11,
+      "Class DoS/DDoS": 0.54,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.32
+    },
+    "Rate <= 1355.55": {
+      "Class Benign": 0.26,
+      "Class DoS/DDoS": 0.62,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.07
+    },
+    "psh_flag_number <= 0.25": {
+      "Class Benign": 0.26,
+      "Class DoS/DDoS": 0.62,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.07
+    },
+    "Header_Length <= 33.0": {
+      "Class Benign": 0.18,
+      "Class DoS/DDoS": 0.73,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.04
+    },
+    "Rate > 121.29": {
+      "Class Benign": 0.19,
+      "Class DoS/DDoS": 0.71,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.04
+    },
+    "IRC <= 0.05": {
+      "Class Benign": 0.19,
+      "Class DoS/DDoS": 0.71,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.04
+    },
+    "syn_count <= 1.5": {
+      "Class Benign": 0.19,
+      "Class DoS/DDoS": 0.71,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.04
+    },
+    "Tot sum > 631.0": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.85,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.02
+    },
+    "fin_count <= 0.5": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.85,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.02
+    },
+    "Tot size <= 204.45": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.07
+    },
+    "IAT <= 0.01": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.64,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.1
+    },
+    "HTTPS > 0.4": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Std <= 573.92": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Max <= 301.5": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "TCP > 0.1": {
+      "Class Benign": 0.27,
+      "Class DoS/DDoS": 0.68,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.03
+    },
+    "HTTP <= 0.05": {
+      "Class Benign": 0.52,
+      "Class DoS/DDoS": 0.39,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.06
+    },
+    "Tot sum > 591.5": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.05
+    },
+    "ack_flag_number <= 0.55": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.05
+    },
+    "Tot size <= 546.4": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.05
+    },
+    "Rate > 38.11": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.05
+    },
+    "ack_flag_number <= 0.95": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.7,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.05
+    },
+    "ack_flag_number > 0.55": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.7,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.05
+    },
+    "Variance > 198750.05": {
+      "Class Benign": 0.3,
+      "Class DoS/DDoS": 0.59,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.06
+    },
+    "Tot sum <= 5999.0": {
+      "Class Benign": 0.17,
+      "Class DoS/DDoS": 0.47,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.31
+    },
+    "AVG > 62.65": {
+      "Class Benign": 0.21,
+      "Class DoS/DDoS": 0.59,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.14
+    },
+    "Time_To_Live <= 161.55": {
+      "Class Benign": 0.02,
+      "Class DoS/DDoS": 0.11,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.87
+    },
+    "syn_count > 1.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 1.0,
+      "Class Spoofing": 0.0
+    },
+    "HTTPS <= 0.26": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 1.0,
+      "Class Spoofing": 0.0
+    },
+    "Std <= 55.65": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 1.0,
+      "Class Spoofing": 0.0
+    },
+    "AVG <= 88.1": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 1.0,
+      "Class Spoofing": 0.0
+    },
+    "cwr_flag_number <= 0.05": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 1.0,
+      "Class Spoofing": 0.0
+    },
+    "Header_Length <= 37.6": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 1.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot sum <= 889.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 1.0,
+      "Class Spoofing": 0.0
+    },
+    "Rate > 62.35": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 1.0,
+      "Class Spoofing": 0.0
+    },
+    "ack_count > 8.5": {
+      "Class Benign": 0.25,
+      "Class DoS/DDoS": 0.62,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.09
+    },
+    "Tot sum > 653.0": {
+      "Class Benign": 0.26,
+      "Class DoS/DDoS": 0.62,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.07
+    },
+    "Tot sum <= 8403.0": {
+      "Class Benign": 0.26,
+      "Class DoS/DDoS": 0.62,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.07
+    },
+    "Rate > 136.08": {
+      "Class Benign": 0.26,
+      "Class DoS/DDoS": 0.62,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.07
+    },
+    "AVG <= 201.35": {
+      "Class Benign": 0.35,
+      "Class DoS/DDoS": 0.47,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.16
+    },
+    "Max <= 1501.5": {
+      "Class Benign": 0.58,
+      "Class DoS/DDoS": 0.41,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "HTTPS > 0.55": {
+      "Class Benign": 0.58,
+      "Class DoS/DDoS": 0.41,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Std <= 346.63": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Max > 1513.0": {
+      "Class Benign": 0.39,
+      "Class DoS/DDoS": 0.56,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.03
+    },
+    "rst_count <= 0.5": {
+      "Class Benign": 0.22,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.09
+    },
+    "Rate <= 3265.26": {
+      "Class Benign": 0.16,
+      "Class DoS/DDoS": 0.76,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.06
+    },
+    "ack_count > 10.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Rate <= 1319.67": {
+      "Class Benign": 0.29,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.03
+    },
+    "IAT <= 0.05": {
+      "Class Benign": 0.52,
+      "Class DoS/DDoS": 0.39,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.06
+    },
+    "Variance > 2813.51": {
+      "Class Benign": 0.52,
+      "Class DoS/DDoS": 0.39,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.06
+    },
+    "AVG > 92.05": {
+      "Class Benign": 0.52,
+      "Class DoS/DDoS": 0.39,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.06
+    },
+    "AVG <= 202.2": {
+      "Class Benign": 0.52,
+      "Class DoS/DDoS": 0.39,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.06
+    },
+    "Header_Length > 21.4": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.85,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.02
+    },
+    "HTTPS > 0.05": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.85,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.02
+    },
+    "Tot sum <= 3514.0": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.85,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.02
+    },
+    "Time_To_Live <= 241.65": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.85,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.02
+    },
+    "syn_flag_number <= 0.1": {
+      "Class Benign": 0.17,
+      "Class DoS/DDoS": 0.81,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.01
+    },
+    "Max <= 1502.5": {
+      "Class Benign": 0.57,
+      "Class DoS/DDoS": 0.35,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.04
+    },
+    "Tot sum > 3655.0": {
+      "Class Benign": 0.52,
+      "Class DoS/DDoS": 0.39,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.06
+    },
+    "psh_flag_number <= 0.37": {
+      "Class Benign": 0.52,
+      "Class DoS/DDoS": 0.39,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.06
+    },
+    "Variance > 680547.12": {
+      "Class Benign": 0.11,
+      "Class DoS/DDoS": 0.54,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.32
+    },
+    "TCP > 0.5": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.85,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.02
+    },
+    "Tot size > 790.65": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.85,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.02
+    },
+    "Rate <= 561.46": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.85,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.02
+    },
+    "Max > 1502.5": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Min <= 61.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.49,
+      "Class Reconnaissance": 0.48,
+      "Class Spoofing": 0.03
+    },
+    "Max <= 64.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.87,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.13
+    },
+    "Time_To_Live <= 78.33": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.87,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.13
+    },
+    "ack_count > 13.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.87,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.13
+    },
+    "ARP <= 0.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.87,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.13
+    },
+    "Tot size > 62.99": {
+      "Class Benign": 0.17,
+      "Class DoS/DDoS": 0.79,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.03
+    },
+    "Tot sum > 2199.5": {
+      "Class Benign": 0.53,
+      "Class DoS/DDoS": 0.39,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.03
+    },
+    "psh_flag_number <= 0.35": {
+      "Class Benign": 0.53,
+      "Class DoS/DDoS": 0.39,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.03
+    },
+    "Min <= 1244.0": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.69,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.06
+    },
+    "Min <= 1507.0": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.64,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.09
+    },
+    "Tot size > 138.05": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.64,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.09
+    },
+    "Variance > 173096.54": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.64,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.09
+    },
+    "AVG > 63.4": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Header_Length > 7.98": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot sum > 15087.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Rate <= 9671.28": {
+      "Class Benign": 0.26,
+      "Class DoS/DDoS": 0.62,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.07
+    },
+    "Min <= 72.0": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.59,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.12
+    },
+    "IAT <= 0.03": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.59,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.12
+    },
+    "rst_count <= 1.5": {
+      "Class Benign": 0.35,
+      "Class DoS/DDoS": 0.47,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.16
+    },
+    "AVG <= 204.45": {
+      "Class Benign": 0.35,
+      "Class DoS/DDoS": 0.47,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.16
+    },
+    "Max <= 1502.0": {
+      "Class Benign": 0.35,
+      "Class DoS/DDoS": 0.47,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.16
+    },
+    "HTTPS <= 0.95": {
+      "Class Benign": 0.35,
+      "Class DoS/DDoS": 0.47,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.16
+    },
+    "Header_Length > 11.0": {
+      "Class Benign": 0.52,
+      "Class DoS/DDoS": 0.39,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.06
+    },
+    "Tot size > 62.65": {
+      "Class Benign": 0.58,
+      "Class DoS/DDoS": 0.41,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot sum <= 35426.0": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.72,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.03
+    },
+    "ack_flag_number <= 0.81": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Number > 10.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Variance <= 16.85": {
+      "Class Benign": 0.07,
+      "Class DoS/DDoS": 0.89,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.03
+    },
+    "Number > 22.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot sum <= 6001.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Max > 1493.5": {
+      "Class Benign": 0.01,
+      "Class DoS/DDoS": 0.89,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.09
+    },
+    "fin_flag_number <= 0.0": {
+      "Class Benign": 0.01,
+      "Class DoS/DDoS": 0.89,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.09
+    },
+    "syn_count <= 3.5": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.27,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.61
+    },
+    "ack_count <= 11.5": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.27,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.61
+    },
+    "Tot sum > 3713.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 1.0
+    },
+    "Max > 1498.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 1.0
+    },
+    "Rate > 47.19": {
+      "Class Benign": 0.04,
+      "Class DoS/DDoS": 0.94,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "TCP > 0.3": {
+      "Class Benign": 0.11,
+      "Class DoS/DDoS": 0.82,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.04
+    },
+    "HTTPS <= 0.1": {
+      "Class Benign": 0.11,
+      "Class DoS/DDoS": 0.82,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.04
+    },
+    "Time_To_Live > 63.35": {
+      "Class Benign": 0.82,
+      "Class DoS/DDoS": 0.15,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.02
+    },
+    "Tot sum > 2495.5": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.1
+    },
+    "Std > 355.28": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.1
+    },
+    "Min <= 1504.0": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.1
+    },
+    "ack_flag_number > 0.85": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.1
+    },
+    "psh_flag_number <= 0.45": {
+      "Class Benign": 0.25,
+      "Class DoS/DDoS": 0.59,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.12
+    },
+    "Variance <= 831186.41": {
+      "Class Benign": 0.58,
+      "Class DoS/DDoS": 0.41,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Max > 1501.5": {
+      "Class Benign": 0.58,
+      "Class DoS/DDoS": 0.41,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Header_Length > 12.4": {
+      "Class Benign": 0.39,
+      "Class DoS/DDoS": 0.5,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.08
+    },
+    "Max <= 5051.5": {
+      "Class Benign": 0.39,
+      "Class DoS/DDoS": 0.5,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.08
+    },
+    "Tot sum <= 9140.0": {
+      "Class Benign": 0.39,
+      "Class DoS/DDoS": 0.5,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.08
+    },
+    "Time_To_Live > 61.95": {
+      "Class Benign": 0.57,
+      "Class DoS/DDoS": 0.31,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.11
+    },
+    "Time_To_Live > 69.85": {
+      "Class Benign": 0.35,
+      "Class DoS/DDoS": 0.47,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.16
+    },
+    "TCP <= 0.35": {
+      "Class Benign": 0.15,
+      "Class DoS/DDoS": 0.4,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.4
+    },
+    "UDP <= 0.75": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 1.0
+    },
+    "IGMP <= 0.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 1.0
+    },
+    "Max <= 189.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 1.0
+    },
+    "Rate > 397.62": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 1.0
+    },
+    "Std > 0.63": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.64,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.1
+    },
+    "Variance <= 157684.25": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.64,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.1
+    },
+    "psh_flag_number <= 0.33": {
+      "Class Benign": 0.18,
+      "Class DoS/DDoS": 0.76,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.03
+    },
+    "Header_Length > 21.8": {
+      "Class Benign": 0.18,
+      "Class DoS/DDoS": 0.76,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.03
+    },
+    "Max <= 1499.0": {
+      "Class Benign": 0.18,
+      "Class DoS/DDoS": 0.76,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.03
+    },
+    "Header_Length <= 33.8": {
+      "Class Benign": 0.18,
+      "Class DoS/DDoS": 0.76,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.03
+    },
+    "syn_flag_number <= 0.0": {
+      "Class Benign": 0.18,
+      "Class DoS/DDoS": 0.76,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.03
+    },
+    "Tot size <= 295.8": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "ack_flag_number > 0.67": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "Max <= 1507.0": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "Std <= 587.83": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "fin_flag_number <= 0.1": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.07
+    },
+    "ack_flag_number > 0.81": {
+      "Class Benign": 0.13,
+      "Class DoS/DDoS": 0.85,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "Tot size <= 63.55": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "ack_count > 22.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "ICMP <= 0.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Max > 64.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Number > 13.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot size <= 198.05": {
+      "Class Benign": 0.57,
+      "Class DoS/DDoS": 0.35,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.04
+    },
+    "Tot size <= 289.8": {
+      "Class Benign": 0.57,
+      "Class DoS/DDoS": 0.35,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.04
+    },
+    "Time_To_Live <= 193.0": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.05
+    },
+    "Tot sum > 5999.0": {
+      "Class Benign": 0.02,
+      "Class DoS/DDoS": 0.95,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.02
+    },
+    "Min > 64.0": {
+      "Class Benign": 0.22,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.09
+    },
+    "Rate > 109.13": {
+      "Class Benign": 0.22,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.09
+    },
+    "psh_flag_number <= 0.55": {
+      "Class Benign": 0.22,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.09
+    },
+    "Time_To_Live <= 220.45": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "SSH <= 0.15": {
+      "Class Benign": 0.3,
+      "Class DoS/DDoS": 0.58,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.07
+    },
+    "Time_To_Live > 62.65": {
+      "Class Benign": 0.3,
+      "Class DoS/DDoS": 0.58,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.07
+    },
+    "Header_Length <= 32.4": {
+      "Class Benign": 0.32,
+      "Class DoS/DDoS": 0.56,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.08
+    },
+    "Variance > 580973.53": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Number <= 11.0": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Header_Length > 26.2": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Rate <= 15745.77": {
+      "Class Benign": 0.26,
+      "Class DoS/DDoS": 0.62,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.07
+    },
+    "HTTPS > 0.2": {
+      "Class Benign": 0.26,
+      "Class DoS/DDoS": 0.62,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.07
+    },
+    "Time_To_Live <= 216.1": {
+      "Class Benign": 0.3,
+      "Class DoS/DDoS": 0.59,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.06
+    },
+    "Max > 2931.5": {
+      "Class Benign": 0.35,
+      "Class DoS/DDoS": 0.47,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.16
+    },
+    "Std > 755.98": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.64,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.1
+    },
+    "UDP <= 0.55": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.64,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.1
+    },
+    "UDP <= 0.15": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "rst_flag_number <= 0.05": {
+      "Class Benign": 0.34,
+      "Class DoS/DDoS": 0.56,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.07
+    },
+    "Tot sum > 7960.5": {
+      "Class Benign": 0.25,
+      "Class DoS/DDoS": 0.59,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.12
+    },
+    "Max > 2874.0": {
+      "Class Benign": 0.22,
+      "Class DoS/DDoS": 0.6,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.12
+    },
+    "HTTPS > 0.25": {
+      "Class Benign": 0.22,
+      "Class DoS/DDoS": 0.6,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.12
+    },
+    "Time_To_Live > 62.45": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.07
+    },
+    "Rate <= 1765.69": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.07
+    },
+    "Std > 755.85": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.07
+    },
+    "Tot sum <= 35794.0": {
+      "Class Benign": 0.42,
+      "Class DoS/DDoS": 0.58,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "AVG > 206.35": {
+      "Class Benign": 0.42,
+      "Class DoS/DDoS": 0.58,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "AVG > 781.85": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "AVG <= 3404.2": {
+      "Class Benign": 0.39,
+      "Class DoS/DDoS": 0.5,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.08
+    },
+    "Rate > 329.77": {
+      "Class Benign": 0.39,
+      "Class DoS/DDoS": 0.5,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.08
+    },
+    "Tot sum > 9140.0": {
+      "Class Benign": 0.39,
+      "Class DoS/DDoS": 0.5,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.08
+    },
+    "Std > 426.91": {
+      "Class Benign": 0.35,
+      "Class DoS/DDoS": 0.47,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.16
+    },
+    "Max <= 655.5": {
+      "Class Benign": 0.07,
+      "Class DoS/DDoS": 0.89,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.03
+    },
+    "Tot size > 58.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "psh_flag_number <= 0.1": {
+      "Class Benign": 0.07,
+      "Class DoS/DDoS": 0.89,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.02
+    },
+    "Tot sum > 10816.0": {
+      "Class Benign": 0.22,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.09
+    },
+    "Time_To_Live <= 219.5": {
+      "Class Benign": 0.22,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.09
+    },
+    "Rate <= 14492.19": {
+      "Class Benign": 0.11,
+      "Class DoS/DDoS": 0.54,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.32
+    },
+    "ece_flag_number <= 0.05": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.69,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.06
+    },
+    "Tot sum <= 34688.0": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.69,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.06
+    },
+    "Header_Length > 24.66": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.07
+    },
+    "ack_flag_number > 0.95": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.7,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.05
+    },
+    "AVG > 216.4": {
+      "Class Benign": 0.3,
+      "Class DoS/DDoS": 0.59,
+      "Class Reconnaissance": 0.05,
+      "Class Spoofing": 0.06
+    },
+    "Rate <= 10256.96": {
+      "Class Benign": 0.32,
+      "Class DoS/DDoS": 0.56,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.08
+    },
+    "Tot sum <= 15205.0": {
+      "Class Benign": 0.22,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.09
+    },
+    "Time_To_Live <= 158.55": {
+      "Class Benign": 0.22,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.09
+    },
+    "psh_flag_number <= 0.22": {
+      "Class Benign": 0.22,
+      "Class DoS/DDoS": 0.66,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.09
+    },
+    "Time_To_Live > 63.43": {
+      "Class Benign": 0.13,
+      "Class DoS/DDoS": 0.85,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "Max > 1512.0": {
+      "Class Benign": 0.13,
+      "Class DoS/DDoS": 0.85,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "Tot size > 63.55": {
+      "Class Benign": 0.13,
+      "Class DoS/DDoS": 0.85,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "Tot sum > 5965.5": {
+      "Class Benign": 0.02,
+      "Class DoS/DDoS": 0.95,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.02
+    },
+    "Std > 124.64": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Header_Length <= 7.18": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "AVG > 74.74": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Std <= 626.26": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Std <= 585.28": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "AVG > 515.7": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Std > 585.28": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Number > 18.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot size <= 138.05": {
+      "Class Benign": 0.34,
+      "Class DoS/DDoS": 0.56,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.07
+    },
+    "Protocol Type > 11.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Min > 77.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot sum > 1337.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Rate > 1388.34": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Number > 55.0": {
+      "Class Benign": 0.04,
+      "Class DoS/DDoS": 0.94,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "fin_count > 0.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot size <= 92.6": {
+      "Class Benign": 0.3,
+      "Class DoS/DDoS": 0.58,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.07
+    },
+    "Min <= 786.0": {
+      "Class Benign": 0.39,
+      "Class DoS/DDoS": 0.5,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.08
+    },
+    "Min > 57.5": {
+      "Class Benign": 0.18,
+      "Class DoS/DDoS": 0.72,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.04
+    },
+    "Tot sum > 639.0": {
+      "Class Benign": 0.18,
+      "Class DoS/DDoS": 0.72,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.04
+    },
+    "IAT <= 0.04": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.85,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.02
+    },
+    "Variance <= 92557.64": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot sum > 35794.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Max <= 8369.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "ack_flag_number <= 1.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Min <= 77.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "HTTPS <= 0.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "ack_flag_number > 0.59": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "AVG <= 593.51": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "AVG <= 515.7": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.68,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.32
+    },
+    "UDP > 0.97": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 1.0
+    },
+    "Rate > 3145.84": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 1.0
+    },
+    "Time_To_Live > 61.78": {
+      "Class Benign": 0.03,
+      "Class DoS/DDoS": 0.95,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "Std > 4.43": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Variance > 19.97": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Max > 195.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Number > 62.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Protocol Type <= 11.5": {
+      "Class Benign": 0.05,
+      "Class DoS/DDoS": 0.92,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.01
+    },
+    "psh_flag_number > 0.1": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "ack_count > 12.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "UDP > 0.75": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.07
+    },
+    "Tot sum > 609.5": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.07
+    },
+    "Max <= 1274.0": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.07
+    },
+    "Tot sum > 1377.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 1.0,
+      "Class Spoofing": 0.0
+    },
+    "psh_flag_number <= 0.06": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 1.0,
+      "Class Spoofing": 0.0
+    },
+    "Rate <= 3182.08": {
+      "Class Benign": 0.37,
+      "Class DoS/DDoS": 0.62,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.01
+    },
+    "Header_Length > 28.2": {
+      "Class Benign": 0.37,
+      "Class DoS/DDoS": 0.62,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.01
+    },
+    "Number <= 12.0": {
+      "Class Benign": 0.37,
+      "Class DoS/DDoS": 0.62,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.01
+    },
+    "Variance <= 534782.66": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.85,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.02
+    },
+    "Header_Length <= 28.2": {
+      "Class Benign": 0.37,
+      "Class DoS/DDoS": 0.62,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.01
+    },
+    "Rate <= 214.21": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "TCP <= 0.3": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "ARP > 0.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Header_Length <= 21.18": {
+      "Class Benign": 0.06,
+      "Class DoS/DDoS": 0.9,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.02
+    },
+    "Max > 655.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "UDP <= 0.59": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Max > 1505.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "ack_flag_number <= 0.63": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Time_To_Live <= 87.6": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Number > 27.5": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.76,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.02
+    },
+    "Tot size <= 1541.55": {
+      "Class Benign": 0.37,
+      "Class DoS/DDoS": 0.53,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.07
+    },
+    "psh_flag_number <= 0.26": {
+      "Class Benign": 0.16,
+      "Class DoS/DDoS": 0.79,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.04
+    },
+    "Rate > 1355.55": {
+      "Class Benign": 0.02,
+      "Class DoS/DDoS": 0.96,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "ack_count > 3.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Header_Length <= 24.74": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot sum > 5878.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Time_To_Live <= 78.17": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot size <= 985.99": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Std <= 667.95": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Variance <= 372531.17": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Rate <= 240.87": {
+      "Class Benign": 0.34,
+      "Class DoS/DDoS": 0.56,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.07
+    },
+    "Header_Length > 9.8": {
+      "Class Benign": 0.21,
+      "Class DoS/DDoS": 0.59,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.14
+    },
+    "UDP <= 0.85": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.07
+    },
+    "Tot size <= 266.5": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.07
+    },
+    "AVG > 64.35": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.07
+    },
+    "AVG <= 458.2": {
+      "Class Benign": 0.23,
+      "Class DoS/DDoS": 0.63,
+      "Class Reconnaissance": 0.07,
+      "Class Spoofing": 0.07
+    },
+    "HTTPS <= 0.55": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Time_To_Live <= 221.25": {
+      "Class Benign": 0.57,
+      "Class DoS/DDoS": 0.31,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.11
+    },
+    "Rate <= 3729.12": {
+      "Class Benign": 0.53,
+      "Class DoS/DDoS": 0.39,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.03
+    },
+    "fin_flag_number <= 0.15": {
+      "Class Benign": 0.53,
+      "Class DoS/DDoS": 0.39,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.03
+    },
+    "Max > 1511.0": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "Tot sum > 3520.0": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "AVG > 499.45": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "Time_To_Live > 62.25": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "AVG <= 2074.3": {
+      "Class Benign": 0.39,
+      "Class DoS/DDoS": 0.56,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.03
+    },
+    "Number <= 18.0": {
+      "Class Benign": 0.39,
+      "Class DoS/DDoS": 0.56,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.03
+    },
+    "Variance > 396943.52": {
+      "Class Benign": 0.39,
+      "Class DoS/DDoS": 0.56,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.03
+    },
+    "Tot sum > 35426.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Std <= 1985.01": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Std <= 1032.24": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "ack_flag_number > 0.39": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "Variance <= 574705.44": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "Header_Length <= 11.88": {
+      "Class Benign": 0.02,
+      "Class DoS/DDoS": 0.97,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.01
+    },
+    "UDP > 0.58": {
+      "Class Benign": 0.06,
+      "Class DoS/DDoS": 0.92,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.02
+    },
+    "UDP <= 1.0": {
+      "Class Benign": 0.06,
+      "Class DoS/DDoS": 0.92,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.02
+    },
+    "Std <= 222.26": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.64,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.1
+    },
+    "DNS <= 0.09": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.64,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.1
+    },
+    "Min > 57.0": {
+      "Class Benign": 0.02,
+      "Class DoS/DDoS": 0.97,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "Std <= 12.13": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Std <= 755.98": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.64,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.1
+    },
+    "Tot sum <= 14232.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 1.0
+    },
+    "Std <= 605.79": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 1.0
+    },
+    "Std <= 250.07": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 1.0
+    },
+    "UDP <= 0.58": {
+      "Class Benign": 0.01,
+      "Class DoS/DDoS": 0.99,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Std <= 90.03": {
+      "Class Benign": 0.02,
+      "Class DoS/DDoS": 0.97,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "ack_count <= 0.5": {
+      "Class Benign": 0.08,
+      "Class DoS/DDoS": 0.86,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.03
+    },
+    "HTTPS <= 0.11": {
+      "Class Benign": 0.09,
+      "Class DoS/DDoS": 0.71,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.18
+    },
+    "IPv > 0.81": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Max > 803.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Variance > 322767.88": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Variance <= 396943.52": {
+      "Class Benign": 0.04,
+      "Class DoS/DDoS": 0.94,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "HTTPS <= 0.2": {
+      "Class Benign": 0.04,
+      "Class DoS/DDoS": 0.94,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "Header_Length <= 22.1": {
+      "Class Benign": 0.04,
+      "Class DoS/DDoS": 0.94,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "Number > 11.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.97,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.03
+    },
+    "Rate > 869.07": {
+      "Class Benign": 0.19,
+      "Class DoS/DDoS": 0.72,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.03
+    },
+    "Std <= 4.43": {
+      "Class Benign": 0.03,
+      "Class DoS/DDoS": 0.95,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "Std > 90.03": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Number > 21.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "syn_flag_number > 0.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "AVG > 599.41": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot sum > 15003.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot sum > 14232.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Header_Length <= 7.98": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot sum > 8559.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "UDP <= 0.97": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Variance <= 1.03": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Time_To_Live > 63.45": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.64,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.1
+    },
+    "TCP > 0.35": {
+      "Class Benign": 0.04,
+      "Class DoS/DDoS": 0.94,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "Time_To_Live > 49.1": {
+      "Class Benign": 0.04,
+      "Class DoS/DDoS": 0.94,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "Number > 11.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Variance > 0.02": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "AVG <= 351.81": {
+      "Class Benign": 0.18,
+      "Class DoS/DDoS": 0.73,
+      "Class Reconnaissance": 0.06,
+      "Class Spoofing": 0.03
+    },
+    "Tot sum > 4822.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "IPv > 0.91": {
+      "Class Benign": 0.05,
+      "Class DoS/DDoS": 0.91,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.02
+    },
+    "Number > 12.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Min > 56.5": {
+      "Class Benign": 0.07,
+      "Class DoS/DDoS": 0.89,
+      "Class Reconnaissance": 0.03,
+      "Class Spoofing": 0.02
+    },
+    "AVG > 63.44": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "Max > 366.5": {
+      "Class Benign": 0.04,
+      "Class DoS/DDoS": 0.94,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "IPv <= 1.0": {
+      "Class Benign": 0.04,
+      "Class DoS/DDoS": 0.94,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "ack_count <= 1.5": {
+      "Class Benign": 0.02,
+      "Class DoS/DDoS": 0.96,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "AVG <= 666.06": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot sum > 6001.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot sum > 26071.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "HTTP <= 0.82": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot sum <= 26071.0": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "Max <= 348.5": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "Time_To_Live <= 82.45": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "Variance <= 226.36": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "Tot size > 59.4": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "Tot size <= 60.3": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "ARP <= 0.5": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Time_To_Live > 62.85": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Rate > 57.68": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Rate > 2316.01": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "Time_To_Live > 57.54": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "AVG <= 74.75": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "Time_To_Live > 62.6": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.97,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.03
+    },
+    "ARP <= 0.1": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.83,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.03
+    },
+    "Variance > 16.85": {
+      "Class Benign": 0.02,
+      "Class DoS/DDoS": 0.97,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "AVG > 351.81": {
+      "Class Benign": 0.01,
+      "Class DoS/DDoS": 0.89,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.09
+    },
+    "AVG <= 1500.4": {
+      "Class Benign": 0.01,
+      "Class DoS/DDoS": 0.89,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.09
+    },
+    "Header_Length <= 14.32": {
+      "Class Benign": 0.01,
+      "Class DoS/DDoS": 0.89,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.09
+    },
+    "Tot sum > 21652.5": {
+      "Class Benign": 0.01,
+      "Class DoS/DDoS": 0.89,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.09
+    },
+    "Time_To_Live <= 147.4": {
+      "Class Benign": 0.24,
+      "Class DoS/DDoS": 0.64,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.1
+    },
+    "Header_Length > 11.88": {
+      "Class Benign": 0.04,
+      "Class DoS/DDoS": 0.94,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "TCP <= 0.1": {
+      "Class Benign": 0.02,
+      "Class DoS/DDoS": 0.96,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "Time_To_Live > 61.2": {
+      "Class Benign": 0.02,
+      "Class DoS/DDoS": 0.97,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.01
+    },
+    "Time_To_Live <= 72.19": {
+      "Class Benign": 0.06,
+      "Class DoS/DDoS": 0.92,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.02
+    },
+    "Tot size <= 956.8": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.83,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.03
+    },
+    "Time_To_Live > 59.27": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "AVG <= 63.4": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "ack_flag_number <= 0.06": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "AVG <= 63.44": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Header_Length <= 20.9": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Variance <= 0.02": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "ack_flag_number <= 0.1": {
+      "Class Benign": 0.05,
+      "Class DoS/DDoS": 0.9,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.02
+    },
+    "Tot size <= 721.5": {
+      "Class Benign": 0.2,
+      "Class DoS/DDoS": 0.67,
+      "Class Reconnaissance": 0.08,
+      "Class Spoofing": 0.05
+    },
+    "Tot size <= 62.99": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Number > 12.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "LLC > 0.94": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Number > 16.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Variance <= 11647.6": {
+      "Class Benign": 0.03,
+      "Class DoS/DDoS": 0.95,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "Rate <= 181063.55": {
+      "Class Benign": 0.03,
+      "Class DoS/DDoS": 0.95,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.01
+    },
+    "Std <= 124.64": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Max <= 803.5": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Telnet <= 0.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Rate > 1147.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Tot sum > 5965.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "ack_count <= 3.5": {
+      "Class Benign": 0.02,
+      "Class DoS/DDoS": 0.95,
+      "Class Reconnaissance": 0.01,
+      "Class Spoofing": 0.02
+    },
+    "Rate > 669.21": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.97,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.03
+    },
+    "Tot size <= 970.98": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.97,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.03
+    },
+    "LLC > 0.86": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Rate > 91.99": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "AVG <= 599.41": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Rate > 1319.67": {
+      "Class Benign": 0.06,
+      "Class DoS/DDoS": 0.9,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.02
+    },
+    "ack_flag_number <= 0.59": {
+      "Class Benign": 0.07,
+      "Class DoS/DDoS": 0.89,
+      "Class Reconnaissance": 0.02,
+      "Class Spoofing": 0.02
+    },
+    "Tot size <= 958.05": {
+      "Class Benign": 0.02,
+      "Class DoS/DDoS": 0.97,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.01
+    },
+    "Variance <= 398961.84": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Time_To_Live <= 95.87": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "DNS <= 0.17": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Min > 48.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Header_Length <= 20.38": {
+      "Class Benign": 0.1,
+      "Class DoS/DDoS": 0.83,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.03
+    },
+    "Time_To_Live <= 69.8": {
+      "Class Benign": 0.11,
+      "Class DoS/DDoS": 0.82,
+      "Class Reconnaissance": 0.04,
+      "Class Spoofing": 0.04
+    },
+    "IRC <= 0.0": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Class Benign": {
+      "Class Benign": 1.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Class DoS/DDoS": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 1.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 0.0
+    },
+    "Class Spoofing": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 0.0,
+      "Class Spoofing": 1.0
+    },
+    "Class Reconnaissance": {
+      "Class Benign": 0.0,
+      "Class DoS/DDoS": 0.0,
+      "Class Reconnaissance": 1.0,
+      "Class Spoofing": 0.0
+    }
+  },
+  "Confidence Interval": {
+    "ack_flag_number > 0.1": 0.49,
+    "Header_Length <= 32.6": 0.4,
+    "Std <= 28.22": 0.28,
+    "rst_flag_number <= 0.15": 0.28,
+    "Tot sum > 618.0": 0.34,
+    "Tot size <= 90.95": 0.34,
+    "SSH <= 0.05": 0.34,
+    "Tot size <= 77.0": 0.4,
+    "HTTPS > 0.35": 0.4,
+    "Rate <= 39547.11": 0.4,
+    "Min > 59.0": 0.4,
+    "fin_flag_number <= 0.05": 0.38,
+    "syn_count <= 0.5": 0.43,
+    "ack_count <= 10.5": 0.63,
+    "AVG <= 206.35": 0.4,
+    "ack_count > 5.5": 1.0,
+    "Class Benign": 1.0,
+    "Number <= 10.5": 0.05,
+    "Tot sum <= 3520.0": 0.12,
+    "syn_flag_number <= 0.05": 0.12,
+    "Min <= 59.0": 0.76,
+    "Time_To_Live > 69.8": 0.41,
+    "IAT > 0.0": 0.47,
+    "HTTP <= 0.25": 0.11,
+    "fin_count <= 1.5": 0.29,
+    "syn_flag_number <= 0.15": 0.42,
+    "Std > 598.22": 0.26,
+    "DNS <= 0.05": 0.26,
+    "HTTPS > 0.15": 0.28,
+    "Max > 1507.0": 0.49,
+    "ack_flag_number > 0.35": 0.05,
+    "Tot size > 350.75": 1.0,
+    "Variance <= 571308.56": 1.0,
+    "rst_flag_number <= 0.1": 1.0,
+    "Time_To_Live <= 202.1": 1.0,
+    "ack_count > 0.5": 0.25,
+    "syn_flag_number > 0.1": 1.0,
+    "rst_count <= 9.5": 1.0,
+    "syn_count > 9.5": 1.0,
+    "Number > 21.0": 1.0,
+    "Class DoS/DDoS": 1.0,
+    "AVG > 72.55": 0.47,
+    "DHCP <= 0.05": 0.47,
+    "psh_flag_number > 0.05": 0.47,
+    "Rate <= 335.24": 0.47,
+    "Time_To_Live <= 139.05": 0.47,
+    "HTTPS > 0.45": 0.47,
+    "Max > 153.5": 0.38,
+    "Header_Length > 11.8": 0.42,
+    "Header_Length <= 29.4": 0.63,
+    "Max <= 1493.5": 0.92,
+    "Max <= 1513.0": 0.74,
+    "Tot size > 62.95": 1.0,
+    "HTTPS > 0.1": 0.16,
+    "Variance <= 562976.78": 0.47,
+    "Tot sum <= 30949.0": 0.54,
+    "Time_To_Live > 66.0": 0.54,
+    "Time_To_Live <= 232.25": 0.54,
+    "ICMP <= 0.05": 0.54,
+    "Std > 448.37": 0.49,
+    "UDP <= 0.14": 0.75,
+    "Variance > 92557.64": 1.0,
+    "Std <= 755.85": 0.81,
+    "Number <= 22.0": 0.4,
+    "Header_Length > 20.38": 0.75,
+    "syn_count > 0.5": 0.75,
+    "syn_count > 10.5": 1.0,
+    "Header_Length > 23.8": 0.36,
+    "Variance > 623806.34": 0.36,
+    "ARP <= 0.05": 0.36,
+    "Min <= 970.5": 0.36,
+    "IPv > 0.85": 0.36,
+    "Min <= 154.0": 0.04,
+    "Variance <= 3350968.12": 0.04,
+    "Max > 2958.0": 0.04,
+    "Std <= 1833.38": 0.43,
+    "psh_flag_number <= 0.2": 1.0,
+    "Variance > 571308.56": 1.0,
+    "ack_count <= 15.0": 1.0,
+    "ack_count > 1.5": 0.63,
+    "syn_count <= 4.5": 0.22,
+    "Number <= 55.0": 0.22,
+    "Class Spoofing": 1.0,
+    "Rate <= 1355.55": 0.36,
+    "psh_flag_number <= 0.25": 0.36,
+    "Header_Length <= 33.0": 0.55,
+    "Rate > 121.29": 0.52,
+    "IRC <= 0.05": 0.52,
+    "syn_count <= 1.5": 0.52,
+    "Tot sum > 631.0": 0.75,
+    "fin_count <= 0.5": 0.75,
+    "Tot size <= 204.45": 0.4,
+    "IAT <= 0.01": 0.4,
+    "HTTPS > 0.4": 1.0,
+    "Std <= 573.92": 1.0,
+    "Max <= 301.5": 1.0,
+    "TCP > 0.1": 0.41,
+    "HTTP <= 0.05": 0.13,
+    "Tot sum > 591.5": 0.43,
+    "ack_flag_number <= 0.55": 0.43,
+    "Tot size <= 546.4": 0.43,
+    "Rate > 38.11": 0.43,
+    "ack_flag_number <= 0.95": 0.5,
+    "ack_flag_number > 0.55": 0.5,
+    "Variance > 198750.05": 0.29,
+    "Tot sum <= 5999.0": 0.16,
+    "AVG > 62.65": 0.38,
+    "Time_To_Live <= 161.55": 0.76,
+    "syn_count > 1.5": 1.0,
+    "HTTPS <= 0.26": 1.0,
+    "Std <= 55.65": 1.0,
+    "AVG <= 88.1": 1.0,
+    "cwr_flag_number <= 0.05": 1.0,
+    "Header_Length <= 37.6": 1.0,
+    "Tot sum <= 889.5": 1.0,
+    "Rate > 62.35": 1.0,
+    "Class Reconnaissance": 1.0,
+    "ack_count > 8.5": 0.37,
+    "Tot sum > 653.0": 0.36,
+    "Tot sum <= 8403.0": 0.36,
+    "Rate > 136.08": 0.36,
+    "AVG <= 201.35": 0.12,
+    "Max <= 1501.5": 0.17,
+    "HTTPS > 0.55": 0.17,
+    "Std <= 346.63": 1.0,
+    "Max > 1513.0": 0.17,
+    "rst_count <= 0.5": 0.44,
+    "Rate <= 3265.26": 0.6,
+    "ack_count > 10.5": 1.0,
+    "Rate <= 1319.67": 0.38,
+    "IAT <= 0.05": 0.13,
+    "Variance > 2813.51": 0.13,
+    "AVG > 92.05": 0.13,
+    "AVG <= 202.2": 0.13,
+    "Header_Length > 21.4": 0.75,
+    "HTTPS > 0.05": 0.75,
+    "Tot sum <= 3514.0": 0.75,
+    "Time_To_Live <= 241.65": 0.75,
+    "syn_flag_number <= 0.1": 0.64,
+    "Max <= 1502.5": 0.22,
+    "Tot sum > 3655.0": 0.13,
+    "psh_flag_number <= 0.37": 0.13,
+    "Variance > 680547.12": 0.22,
+    "TCP > 0.5": 0.75,
+    "Tot size > 790.65": 0.75,
+    "Rate <= 561.46": 0.75,
+    "Max > 1502.5": 1.0,
+    "Min <= 61.0": 0.01,
+    "Max <= 64.0": 0.74,
+    "Time_To_Live <= 78.33": 0.74,
+    "ack_count > 13.0": 0.74,
+    "ARP <= 0.0": 0.74,
+    "Tot size > 62.99": 0.62,
+    "Tot sum > 2199.5": 0.14,
+    "psh_flag_number <= 0.35": 0.14,
+    "Min <= 1244.0": 0.49,
+    "Min <= 1507.0": 0.4,
+    "Tot size > 138.05": 0.4,
+    "Variance > 173096.54": 0.4,
+    "AVG > 63.4": 1.0,
+    "Header_Length > 7.98": 1.0,
+    "Tot sum > 15087.0": 1.0,
+    "Rate <= 9671.28": 0.36,
+    "Min <= 72.0": 0.35,
+    "IAT <= 0.03": 0.35,
+    "rst_count <= 1.5": 0.12,
+    "AVG <= 204.45": 0.12,
+    "Max <= 1502.0": 0.12,
+    "HTTPS <= 0.95": 0.12,
+    "Header_Length > 11.0": 0.13,
+    "Tot size > 62.65": 0.17,
+    "Tot sum <= 35426.0": 0.48,
+    "ack_flag_number <= 0.81": 1.0,
+    "Number > 10.5": 1.0,
+    "Variance <= 16.85": 0.82,
+    "Number > 22.0": 1.0,
+    "Tot sum <= 6001.0": 1.0,
+    "Max > 1493.5": 0.8,
+    "fin_flag_number <= 0.0": 0.8,
+    "syn_count <= 3.5": 0.34,
+    "ack_count <= 11.5": 0.34,
+    "Tot sum > 3713.0": 1.0,
+    "Max > 1498.5": 1.0,
+    "Rate > 47.19": 0.9,
+    "TCP > 0.3": 0.71,
+    "HTTPS <= 0.1": 0.71,
+    "Time_To_Live > 63.35": 0.67,
+    "Tot sum > 2495.5": 0.39,
+    "Std > 355.28": 0.39,
+    "Min <= 1504.0": 0.39,
+    "ack_flag_number > 0.85": 0.39,
+    "psh_flag_number <= 0.45": 0.34,
+    "Variance <= 831186.41": 0.17,
+    "Max > 1501.5": 0.17,
+    "Header_Length > 12.4": 0.11,
+    "Max <= 5051.5": 0.11,
+    "Tot sum <= 9140.0": 0.11,
+    "Time_To_Live > 61.95": 0.26,
+    "Time_To_Live > 69.85": 0.12,
+    "TCP <= 0.35": 0.0,
+    "UDP <= 0.75": 1.0,
+    "IGMP <= 0.0": 1.0,
+    "Max <= 189.5": 1.0,
+    "Rate > 397.62": 1.0,
+    "Std > 0.63": 0.4,
+    "Variance <= 157684.25": 0.4,
+    "psh_flag_number <= 0.33": 0.58,
+    "Header_Length > 21.8": 0.58,
+    "Max <= 1499.0": 0.58,
+    "Header_Length <= 33.8": 0.58,
+    "syn_flag_number <= 0.0": 0.58,
+    "Tot size <= 295.8": 0.47,
+    "ack_flag_number > 0.67": 0.47,
+    "Max <= 1507.0": 0.47,
+    "Std <= 587.83": 0.47,
+    "fin_flag_number <= 0.1": 0.4,
+    "ack_flag_number > 0.81": 0.72,
+    "Tot size <= 63.55": 1.0,
+    "ack_count > 22.0": 1.0,
+    "ICMP <= 0.0": 1.0,
+    "Max > 64.0": 1.0,
+    "Number > 13.0": 1.0,
+    "Tot size <= 198.05": 0.22,
+    "Tot size <= 289.8": 0.22,
+    "Time_To_Live <= 193.0": 0.43,
+    "Tot sum > 5999.0": 0.93,
+    "Min > 64.0": 0.44,
+    "Rate > 109.13": 0.44,
+    "psh_flag_number <= 0.55": 0.44,
+    "Time_To_Live <= 220.45": 0.47,
+    "SSH <= 0.15": 0.28,
+    "Time_To_Live > 62.65": 0.28,
+    "Header_Length <= 32.4": 0.24,
+    "Variance > 580973.53": 1.0,
+    "Number <= 11.0": 1.0,
+    "Header_Length > 26.2": 1.0,
+    "Rate <= 15745.77": 0.36,
+    "HTTPS > 0.2": 0.36,
+    "Time_To_Live <= 216.1": 0.29,
+    "Max > 2931.5": 0.12,
+    "Std > 755.98": 0.4,
+    "UDP <= 0.55": 0.4,
+    "UDP <= 0.15": 1.0,
+    "rst_flag_number <= 0.05": 0.22,
+    "Tot sum > 7960.5": 0.34,
+    "Max > 2874.0": 0.38,
+    "HTTPS > 0.25": 0.38,
+    "Time_To_Live > 62.45": 0.4,
+    "Rate <= 1765.69": 0.4,
+    "Std > 755.85": 0.4,
+    "Tot sum <= 35794.0": 0.16,
+    "AVG > 206.35": 0.16,
+    "AVG > 781.85": 1.0,
+    "AVG <= 3404.2": 0.11,
+    "Rate > 329.77": 0.11,
+    "Tot sum > 9140.0": 0.11,
+    "Std > 426.91": 0.12,
+    "Max <= 655.5": 0.82,
+    "Tot size > 58.0": 1.0,
+    "psh_flag_number <= 0.1": 0.82,
+    "Tot sum > 10816.0": 0.44,
+    "Time_To_Live <= 219.5": 0.44,
+    "Rate <= 14492.19": 0.22,
+    "ece_flag_number <= 0.05": 0.49,
+    "Tot sum <= 34688.0": 0.49,
+    "Header_Length > 24.66": 0.4,
+    "ack_flag_number > 0.95": 0.5,
+    "AVG > 216.4": 0.29,
+    "Rate <= 10256.96": 0.24,
+    "Tot sum <= 15205.0": 0.44,
+    "Time_To_Live <= 158.55": 0.44,
+    "psh_flag_number <= 0.22": 0.44,
+    "Time_To_Live > 63.43": 0.72,
+    "Max > 1512.0": 0.72,
+    "Tot size > 63.55": 0.72,
+    "Tot sum > 5965.5": 0.93,
+    "Std > 124.64": 1.0,
+    "Header_Length <= 7.18": 1.0,
+    "AVG > 74.74": 1.0,
+    "Std <= 626.26": 1.0,
+    "Std <= 585.28": 1.0,
+    "AVG > 515.7": 1.0,
+    "Std > 585.28": 1.0,
+    "Number > 18.0": 1.0,
+    "Tot size <= 138.05": 0.22,
+    "Protocol Type > 11.5": 1.0,
+    "Min > 77.0": 1.0,
+    "Tot sum > 1337.0": 1.0,
+    "Rate > 1388.34": 1.0,
+    "Number > 55.0": 0.9,
+    "fin_count > 0.5": 1.0,
+    "Tot size <= 92.6": 0.28,
+    "Min <= 786.0": 0.11,
+    "Min > 57.5": 0.54,
+    "Tot sum > 639.0": 0.54,
+    "IAT <= 0.04": 0.75,
+    "Variance <= 92557.64": 1.0,
+    "Tot sum > 35794.0": 1.0,
+    "Max <= 8369.0": 1.0,
+    "ack_flag_number <= 1.0": 1.0,
+    "Min <= 77.0": 1.0,
+    "HTTPS <= 0.0": 1.0,
+    "ack_flag_number > 0.59": 1.0,
+    "AVG <= 593.51": 1.0,
+    "AVG <= 515.7": 0.36,
+    "UDP > 0.97": 1.0,
+    "Rate > 3145.84": 1.0,
+    "Time_To_Live > 61.78": 0.92,
+    "Std > 4.43": 1.0,
+    "Variance > 19.97": 1.0,
+    "Max > 195.5": 1.0,
+    "Number > 62.0": 1.0,
+    "Protocol Type <= 11.5": 0.87,
+    "psh_flag_number > 0.1": 1.0,
+    "ack_count > 12.5": 1.0,
+    "UDP > 0.75": 0.4,
+    "Tot sum > 609.5": 0.4,
+    "Max <= 1274.0": 0.4,
+    "Tot sum > 1377.0": 1.0,
+    "psh_flag_number <= 0.06": 1.0,
+    "Rate <= 3182.08": 0.25,
+    "Header_Length > 28.2": 0.25,
+    "Number <= 12.0": 0.25,
+    "Variance <= 534782.66": 0.75,
+    "Header_Length <= 28.2": 0.25,
+    "Rate <= 214.21": 1.0,
+    "TCP <= 0.3": 1.0,
+    "ARP > 0.0": 1.0,
+    "Header_Length <= 21.18": 0.84,
+    "Max > 655.5": 1.0,
+    "UDP <= 0.59": 1.0,
+    "Max > 1505.0": 1.0,
+    "ack_flag_number <= 0.63": 1.0,
+    "Time_To_Live <= 87.6": 1.0,
+    "Number > 27.5": 0.56,
+    "Tot size <= 1541.55": 0.16,
+    "psh_flag_number <= 0.26": 0.63,
+    "Rate > 1355.55": 0.94,
+    "ack_count > 3.5": 1.0,
+    "Header_Length <= 24.74": 1.0,
+    "Tot sum > 5878.0": 1.0,
+    "Time_To_Live <= 78.17": 1.0,
+    "Tot size <= 985.99": 1.0,
+    "Std <= 667.95": 1.0,
+    "Variance <= 372531.17": 1.0,
+    "Rate <= 240.87": 0.22,
+    "Header_Length > 9.8": 0.38,
+    "UDP <= 0.85": 0.4,
+    "Tot size <= 266.5": 0.4,
+    "AVG > 64.35": 0.4,
+    "AVG <= 458.2": 0.4,
+    "HTTPS <= 0.55": 1.0,
+    "Time_To_Live <= 221.25": 0.26,
+    "Rate <= 3729.12": 0.14,
+    "fin_flag_number <= 0.15": 0.14,
+    "Max > 1511.0": 0.47,
+    "Tot sum > 3520.0": 0.47,
+    "AVG > 499.45": 0.47,
+    "Time_To_Live > 62.25": 0.47,
+    "AVG <= 2074.3": 0.17,
+    "Number <= 18.0": 0.17,
+    "Variance > 396943.52": 0.17,
+    "Tot sum > 35426.0": 1.0,
+    "Std <= 1985.01": 1.0,
+    "Std <= 1032.24": 1.0,
+    "ack_flag_number > 0.39": 0.47,
+    "Variance <= 574705.44": 0.47,
+    "Header_Length <= 11.88": 0.95,
+    "UDP > 0.58": 0.86,
+    "UDP <= 1.0": 0.86,
+    "Std <= 222.26": 0.4,
+    "DNS <= 0.09": 0.4,
+    "Min > 57.0": 0.95,
+    "Std <= 12.13": 1.0,
+    "Std <= 755.98": 0.4,
+    "Tot sum <= 14232.0": 1.0,
+    "Std <= 605.79": 1.0,
+    "Std <= 250.07": 1.0,
+    "UDP <= 0.58": 0.98,
+    "Std <= 90.03": 0.95,
+    "ack_count <= 0.5": 0.78,
+    "HTTPS <= 0.11": 0.53,
+    "IPv > 0.81": 1.0,
+    "Max > 803.5": 1.0,
+    "Variance > 322767.88": 1.0,
+    "Variance <= 396943.52": 0.9,
+    "HTTPS <= 0.2": 0.9,
+    "Header_Length <= 22.1": 0.9,
+    "Number > 11.0": 0.94,
+    "Rate > 869.07": 0.53,
+    "Std <= 4.43": 0.92,
+    "Std > 90.03": 1.0,
+    "Number > 21.5": 1.0,
+    "syn_flag_number > 0.0": 1.0,
+    "AVG > 599.41": 1.0,
+    "Tot sum > 15003.0": 1.0,
+    "Tot sum > 14232.0": 1.0,
+    "Header_Length <= 7.98": 1.0,
+    "Tot sum > 8559.0": 1.0,
+    "UDP <= 0.97": 1.0,
+    "Variance <= 1.03": 1.0,
+    "Time_To_Live > 63.45": 0.4,
+    "TCP > 0.35": 0.9,
+    "Time_To_Live > 49.1": 0.9,
+    "Number > 11.5": 1.0,
+    "Variance > 0.02": 1.0,
+    "AVG <= 351.81": 0.55,
+    "Tot sum > 4822.0": 1.0,
+    "IPv > 0.91": 0.86,
+    "Number > 12.0": 1.0,
+    "Min > 56.5": 0.82,
+    "AVG > 63.44": 0.47,
+    "Max > 366.5": 0.9,
+    "IPv <= 1.0": 0.9,
+    "ack_count <= 1.5": 0.94,
+    "AVG <= 666.06": 1.0,
+    "Tot sum > 6001.0": 1.0,
+    "Tot sum > 26071.0": 1.0,
+    "HTTP <= 0.82": 1.0,
+    "Tot sum <= 26071.0": 0.47,
+    "Max <= 348.5": 0.47,
+    "Time_To_Live <= 82.45": 0.47,
+    "Variance <= 226.36": 0.47,
+    "Tot size > 59.4": 0.47,
+    "Tot size <= 60.3": 1.0,
+    "ARP <= 0.5": 1.0,
+    "Time_To_Live > 62.85": 1.0,
+    "Rate > 57.68": 1.0,
+    "Rate > 2316.01": 0.47,
+    "Time_To_Live > 57.54": 0.47,
+    "AVG <= 74.75": 0.47,
+    "Time_To_Live > 62.6": 0.94,
+    "ARP <= 0.1": 0.73,
+    "Variance > 16.85": 0.95,
+    "AVG > 351.81": 0.8,
+    "AVG <= 1500.4": 0.8,
+    "Header_Length <= 14.32": 0.8,
+    "Tot sum > 21652.5": 0.8,
+    "Time_To_Live <= 147.4": 0.4,
+    "Header_Length > 11.88": 0.9,
+    "TCP <= 0.1": 0.94,
+    "Time_To_Live > 61.2": 0.95,
+    "Time_To_Live <= 72.19": 0.86,
+    "Tot size <= 956.8": 0.73,
+    "Time_To_Live > 59.27": 0.47,
+    "AVG <= 63.4": 1.0,
+    "ack_flag_number <= 0.06": 1.0,
+    "AVG <= 63.44": 1.0,
+    "Header_Length <= 20.9": 1.0,
+    "Variance <= 0.02": 1.0,
+    "ack_flag_number <= 0.1": 0.85,
+    "Tot size <= 721.5": 0.47,
+    "Tot size <= 62.99": 1.0,
+    "Number > 12.5": 1.0,
+    "LLC > 0.94": 1.0,
+    "Number > 16.0": 1.0,
+    "Variance <= 11647.6": 0.92,
+    "Rate <= 181063.55": 0.92,
+    "Std <= 124.64": 1.0,
+    "Max <= 803.5": 1.0,
+    "Telnet <= 0.0": 1.0,
+    "Rate > 1147.0": 1.0,
+    "Tot sum > 5965.0": 1.0,
+    "ack_count <= 3.5": 0.93,
+    "Rate > 669.21": 0.94,
+    "Tot size <= 970.98": 0.94,
+    "LLC > 0.86": 1.0,
+    "Rate > 91.99": 1.0,
+    "AVG <= 599.41": 1.0,
+    "Rate > 1319.67": 0.84,
+    "ack_flag_number <= 0.59": 0.82,
+    "Tot size <= 958.05": 0.95,
+    "Variance <= 398961.84": 1.0,
+    "Time_To_Live <= 95.87": 1.0,
+    "DNS <= 0.17": 1.0,
+    "Min > 48.0": 1.0,
+    "Header_Length <= 20.38": 0.73,
+    "Time_To_Live <= 69.8": 0.71,
+    "IRC <= 0.0": 1.0
+  }
+}
