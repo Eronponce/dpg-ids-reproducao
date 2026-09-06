@@ -4,7 +4,7 @@ Este repositório reproduz os números do capítulo de métodos e execuções da
 dissertação **Decision Predicate Graphs para explicabilidade de detecção de
 ataques em redes**.
 
-São **três comandos**. Nenhum deles precisa de GPU, de credencial ou de baixar
+São **quatro comandos**. Nenhum deles precisa de GPU, de credencial ou de baixar
 nada além deste repositório.
 
 ---
@@ -21,15 +21,30 @@ Python 3.10 ou mais novo.
 
 ---
 
-## Os três comandos
+## Os quatro comandos
 
 | # | comando | o que reproduz | tempo |
 |---|---|---|---|
 | 1 | `python 1_random_forest.py` | desempenho da floresta e resultado por classe | ~5 s |
 | 2 | `python 2_correctness.py` | as duas medidas de *Correctness* e o controle negativo por sorteio | ~1 min |
-| 3 | `python 3_isolation_forest.py` | os três grafos não supervisionados, *betweenness*, comunidades, centralidade contra polaridade | ~30 s |
+| 3 | `python 3_isolation_forest.py` | os três grafos não supervisionados **com filtro ANOVA**, de 62/60/56 nós | ~30 s |
+| 4 | `python 4_grafos_sem_filtro.py` | os três grafos **sem filtro**, de 76 nós, e as leituras que saem deles | ~30 s |
 
 Rode na ordem que quiser, são independentes.
+
+> ⚠️ **Os comandos 3 e 4 leem grafos diferentes, e a conclusão muda entre eles.**
+> O 3 usa os grafos que passaram pelo filtro ANOVA+CON, de 62, 60 e 56 nós. O 4 usa
+> os construídos sobre os splits crus de 39 features, de 76 nós cada.
+>
+> A correlação de posto entre centralidade e polaridade dá `−0,053`, `−0,131` e
+> `+0,204`, nenhuma significativa, nos grafos com filtro; e `+0,364`, `+0,188` e
+> `+0,378` nos sem filtro. **Não citar um número de um conjunto como se fosse do
+> outro.** O que vale nos dois é que o líder de uma leitura nunca é o da outra.
+
+### O quarto comando também confere sozinho
+
+Ele compara nós, arestas, *betweenness*, alcance e a correlação de posto contra os
+valores publicados, nos três cenários, e sai com código 1 se algum divergir.
 
 ### O primeiro comando confere sozinho
 
@@ -51,9 +66,11 @@ do capítulo. Se ele imprimir `CONFERE`, o ambiente reproduz o experimento.
 |---|---|---|
 | `dataset_balanceado_label.csv` | 68.347 linhas, 39 features e o rótulo em quatro macroclasses | derivado do `Merged01.csv` do CICIoT2023 |
 | `rf_grafo_nos.csv` | as métricas por nó do grafo supervisionado, 479 nós | saída da biblioteca DPG |
+| `rf_grafo_arestas.csv` | as 758 arestas do mesmo grafo, com o peso de co-ocorrência | saída da biblioteca DPG |
 | `rf_grafo_comunidades.json` | os agrupamentos por classe do mesmo grafo | saída da biblioteca DPG |
-| `if_{single,dupla,trio}_arestas.csv` | as arestas dos três grafos não supervisionados | saída da biblioteca DPG-iForest |
+| `if_{single,dupla,trio}_arestas.csv` | as arestas dos três grafos não supervisionados **com filtro ANOVA**, 62/60/56 nós | saída da biblioteca DPG-iForest |
 | `if_{single,dupla,trio}_nos.csv` | as métricas por nó dos mesmos grafos, com o *propagation score* | saída da biblioteca DPG-iForest |
+| `if_{single,dupla,trio}_{nos,arestas,comunidades}_sem_filtro.csv` | os três grafos **sem filtro**, de 76 nós, sobre os splits crus de 39 features | saída da biblioteca DPG-iForest, execuções de 04/09/2026 |
 
 O `dataset_balanceado_label.csv` é o arquivo exato de onde saiu o grafo do
 capítulo, e não uma reconstrução. É o que permite que a acurácia bata na
