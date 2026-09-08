@@ -40,28 +40,53 @@ LIMIAR_COMUNIDADE = 0.2
 
 
 def rotulos_do_grafo(d):
-    """Devolve os rotulos dos nos, tentando as formas em que a explicacao os traz.
+    """Rotulos dos nos de predicado e de classe, SEM as arestas.
 
-    Se nao achar, devolve None, e quem chama ABORTA. Nunca 'conferencia parcial'.
+    A lista de nos da biblioteca traz tambem as arestas, cujo identificador tem
+    `->` e cujo rotulo e vazio. Ignora-las e o que o proprio codigo da variante
+    Isolation Forest faz. Sem isso a contagem vira 479 + 758 = 1237.
+
+    Devolve None se nao conseguir ler, e quem chama ABORTA. Nunca parcial.
     """
+    nm = d.get("node_metrics")
+    if nm is not None and hasattr(nm, "columns"):
+        for c in ("Label", "label", "name"):
+            if c in nm.columns:
+                r = [str(x) for x in nm[c] if str(x).strip()]
+                if r:
+                    print("  rotulos lidos de node_metrics")
+                    return r
+
     nos = d.get("nodes")
     if nos is not None:
         try:
             if hasattr(nos, "columns"):
                 for c in ("Label", "label", "name"):
                     if c in nos.columns:
-                        return [str(x) for x in nos[c]]
-            if isinstance(nos, (list, tuple)) and nos:
+                        r = [str(x) for x in nos[c] if str(x).strip()]
+                        if r:
+                            print("  rotulos lidos da coluna %s de nodes" % c)
+                            return r
+            elif isinstance(nos, (list, tuple)) and nos:
                 if isinstance(nos[0], (list, tuple)) and len(nos[0]) > 1:
-                    return [str(x[1]) for x in nos]
-                return [str(x) for x in nos]
+                    r = [str(x[1]) for x in nos
+                         if "->" not in str(x[0]) and str(x[1]).strip()]
+                    if r:
+                        print("  rotulos lidos de nodes, %d entradas de aresta ignoradas"
+                              % (len(nos) - len(r)))
+                        return r
         except Exception as e:
             print("  falha ao ler 'nodes': %s" % e)
 
     g = d.get("graph")
     if g is not None and hasattr(g, "nodes"):
         try:
-            return [str(g.nodes[n].get("label", n)) for n in g.nodes()]
+            r = [str(g.nodes[n].get("label", n)) for n in g.nodes()
+                 if "->" not in str(n)]
+            r = [x for x in r if x.strip()]
+            if r:
+                print("  rotulos lidos de graph")
+                return r
         except Exception as e:
             print("  falha ao ler 'graph': %s" % e)
     return None
@@ -104,9 +129,9 @@ def main():
         print("  ABORTANDO sem gravar. Bounds nao conferidos nao servem.")
         sys.exit(1)
 
-    rot_novo = sorted(rot_novo)
-    print("  publicados %d nos | reconstruidos %d nos" % (len(rot_pub), len(rot_novo)))
-    if rot_novo != rot_pub:
+    print("  publicados %d nos (%d distintos) | reconstruidos %d nos (%d distintos)"
+          % (len(rot_pub), len(set(rot_pub)), len(rot_novo), len(set(rot_novo))))
+    if set(rot_novo) != set(rot_pub):
         so_novo = set(rot_novo) - set(rot_pub)
         so_pub = set(rot_pub) - set(rot_novo)
         print("  >> DIVERGE. %d rotulos so no novo, %d so no publicado"
