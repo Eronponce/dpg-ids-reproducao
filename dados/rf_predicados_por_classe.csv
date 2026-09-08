@@ -1,0 +1,5 @@
+,Tot sum,Time_To_Live,Rate,Max,AVG,Std,Header_Length,Variance,Tot size,Number,ack_flag_number,Min,HTTPS,ack_count,psh_flag_number,UDP,syn_count,TCP,syn_flag_number,IAT,ARP,fin_flag_number,IPv,rst_count,DNS,HTTP,rst_flag_number,fin_count,IRC,LLC,Protocol Type,ICMP,SSH,DHCP,Telnet,IGMP,cwr_flag_number,ece_flag_number
+Benign,2,5,3,5,3,2,2,7,6,2,1,0,3,2,3,1,0,0,0,1,1,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0
+DoS/DDoS,37,30,28,27,27,26,26,22,21,18,16,16,12,12,9,9,6,7,6,4,4,3,4,3,3,2,2,3,2,2,2,2,1,1,1,0,0,1
+Reconnaissance,2,0,1,0,1,1,1,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Spoofing,3,1,2,2,0,2,0,0,1,0,0,1,0,1,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0

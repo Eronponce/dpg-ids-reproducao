@@ -80,6 +80,8 @@ sua origem.
 | `rf_grafo_arestas.csv` | as 758 arestas do mesmo grafo, com o peso de co-ocorrência | saída da biblioteca DPG |
 | `rf_grafo_comunidades.json` | os agrupamentos por classe do mesmo grafo | saída da biblioteca DPG |
 | `rf_rankings_por_classe.csv` | cada predicado com sua classe e sua posição por alcance e por *betweenness* | gerado pelo comando 7 |
+| `rf_class_bounds.csv` | o intervalo de cada feature por classe, 77 linhas em quatro comunidades | gerado pelo comando 6 |
+| `rf_predicados_por_classe.csv` | quantos predicados cada classe usa de cada feature | gerado pelo comando 6 |
 | `rf_cobertura_seletividade.csv` e demais `rf_controle_*`, `rf_importancia_*`, `rf_sensibilidade_*` | as tabelas de *Correctness* e seus controles | gerados pelo comando 2 |
 | `if_{single,dupla,trio}_nos.csv` | métricas por nó dos três grafos não supervisionados, 76 nós, com o *IOP-Score* | saída da DPG-iForest, execuções de 04/09/2026 |
 | `if_{single,dupla,trio}_arestas.csv` | as arestas dos mesmos grafos | saída da DPG-iForest |
