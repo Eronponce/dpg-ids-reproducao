@@ -1,0 +1,14 @@
+{
+  "acuracia_controle": 0.2568397951719093,
+  "nos": 1112,
+  "arestas": 1663,
+  "predicados": 1108,
+  "lrc_max": 3.2274232663054714,
+  "clusters": {
+    "Class Benign": 163,
+    "Class DoS/DDoS": 165,
+    "Class Reconnaissance": 99,
+    "Class Spoofing": 685,
+    "Ambiguous": 0
+  }
+}

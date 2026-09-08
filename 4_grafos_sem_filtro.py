@@ -34,8 +34,8 @@ ESPERADO = {
 
 
 def carrega(c):
-    n = pd.read_csv("dados/if_%s_nos_sem_filtro.csv" % c)
-    e = pd.read_csv("dados/if_%s_arestas_sem_filtro.csv" % c)
+    n = pd.read_csv("dados/if_%s_nos.csv" % c)
+    e = pd.read_csv("dados/if_%s_arestas.csv" % c)
     G = nx.DiGraph()
     for _, r in e.iterrows():
         G.add_edge(r["Source_id"], r["Target_id"], weight=float(r["Weighted frequency"]))

@@ -92,6 +92,7 @@ for cen, a, b in polar:
 print("\n  Em nenhuma das tres o predicado mais central e o mais polarizado.")
 
 print("\n" + "=" * 76)
+outlier_centric = []
 print("AS COMUNIDADES COLAPSAM, E O BACKBONE NAO RESGATA")
 print("=" * 76)
 for cen, G, no in tabelas:
@@ -114,4 +115,11 @@ for cen, G, no in tabelas:
             print("             c%d, %2d nos, IOPS medio %+7.4f  ->  %s"
                   % (k + 1, len(c), mm,
                      "outlier-centric" if mm < 0 else "benign-centric"))
-print("\n  Em single e dupla sobrevive uma comunidade outlier-centric. No trio, nao.")
+            if mm < 0:
+                outlier_centric.append(cen)
+if outlier_centric:
+    print("\n  Sobrevive comunidade outlier-centric no backbone de: %s."
+          % ", ".join(outlier_centric))
+else:
+    print("\n  Em nenhuma das tres misturas sobrevive comunidade outlier-centric no"
+          " backbone.")
