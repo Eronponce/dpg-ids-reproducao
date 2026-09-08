@@ -42,7 +42,7 @@ TESTE = {"single": "single_test_fixed_BEN05.csv",
 # arquivo que sai da execucao -> arquivo publicado, com a chave de ordenacao
 PARES = [("dpg_nodes_metrics.csv", "if_%s_nos.csv", ["Node"]),
          ("dpg_edges_metrics.csv", "if_%s_arestas.csv", ["Source_id", "Target_id"]),
-         ("dpg_communities.csv", "if_%s_comunidades.csv", None),
+         ("dpg_communities.csv", "if_%s_comunidades.csv", ["Node"]),
          ("dpg_class_bounds.csv", "if_%s_class_bounds.csv", ["lado", "feature"])]
 
 
@@ -58,9 +58,9 @@ def compara(saiu, publicado, chave):
         return False, "colunas diferem: %s contra %s" % (list(a.columns), list(b.columns))
     if a.shape != b.shape:
         return False, "forma difere: %s contra %s" % (a.shape, b.shape)
-    if chave and all(c in a.columns for c in chave):
-        a = a.sort_values(chave).reset_index(drop=True)
-        b = b.sort_values(chave).reset_index(drop=True)
+    ordem = chave if (chave and all(c in a.columns for c in chave)) else list(a.columns)
+    a = a.sort_values(ordem).reset_index(drop=True)
+    b = b.sort_values(ordem).reset_index(drop=True)
     if a.equals(b):
         return True, "identico, %s" % (a.shape,)
     num = a.select_dtypes("number").columns
@@ -138,7 +138,10 @@ def main():
                     falhas.append("%s/%s" % (cen, nome))
             print()
     finally:
-        shutil.rmtree(tmp, ignore_errors=True)
+        if falhas:
+            print("saida da reconstrucao mantida em %s para inspecao" % tmp)
+        else:
+            shutil.rmtree(tmp, ignore_errors=True)
 
     print("=" * 78)
     if falhas:
