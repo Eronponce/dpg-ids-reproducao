@@ -1,0 +1,62 @@
+==========================================================================
+### SINGLE ###
+item  8  nos 76 | arestas 4914 | densidade 0.8621
+item  9  betweenness zero em 27 de 76, maior 0.3220
+item 10  maior alcance 13.9241  em syn_count >
+item 11  grafo cheio: 1 comunidade(s), maior com 76 nos
+         backbone 10%: 491 arestas, 1 comunidade(s), maior com 64 de 76 nos
+item 12  Spearman LRC x IOPS  rho +0.364  p 0.001  sobre 76 nos
+item 13  menor IOPS  cwr_flag_number >      -1.8891
+item 14  formula (To Inliers - To Outliers)/In Weight, desvio maximo 4.4e-16
+         log(In Weight) x |IOPS|:  PEARSON -0.712   spearman -0.226
+item 15  transicoes mais pesadas:
+         syn_count >            -> Class -1         85431
+         Max <=                 -> Class 1          61956
+         rst_count >            -> Class -1         61650
+  >> CONFERE contra os valores publicados
+
+==========================================================================
+### DUPLA ###
+item  8  nos 76 | arestas 4882 | densidade 0.8565
+item  9  betweenness zero em 20 de 76, maior 0.3688
+item 10  maior alcance 13.3610  em rst_count >
+item 11  grafo cheio: 1 comunidade(s), maior com 76 nos
+         backbone 10%: 488 arestas, 1 comunidade(s), maior com 60 de 76 nos
+item 12  Spearman LRC x IOPS  rho +0.188  p 0.104  sobre 76 nos
+item 13  menor IOPS  syn_count >            -0.7143
+item 14  formula (To Inliers - To Outliers)/In Weight, desvio maximo 1.2e-16
+         log(In Weight) x |IOPS|:  PEARSON -0.620   spearman -0.160
+item 15  transicoes mais pesadas:
+         rst_count >            -> Class -1         76238
+         Max <=                 -> Class 1          63042
+         Rate <=                -> Class -1         62050
+  >> CONFERE contra os valores publicados
+
+==========================================================================
+### TRIO ###
+item  8  nos 76 | arestas 4853 | densidade 0.8514
+item  9  betweenness zero em 31 de 76, maior 0.3347
+item 10  maior alcance 14.3616  em rst_count >
+item 11  grafo cheio: 1 comunidade(s), maior com 76 nos
+         backbone 10%: 485 arestas, 1 comunidade(s), maior com 61 de 76 nos
+item 12  Spearman LRC x IOPS  rho +0.378  p 0.001  sobre 76 nos
+item 13  menor IOPS  cwr_flag_number >      -3.8610
+item 14  formula (To Inliers - To Outliers)/In Weight, desvio maximo 4.4e-16
+         log(In Weight) x |IOPS|:  PEARSON -0.710   spearman -0.316
+item 15  transicoes mais pesadas:
+         rst_count >            -> Class -1         81980
+         Max <=                 -> Class 1          62803
+         HTTPS >                -> Class 1          58222
+  >> CONFERE contra os valores publicados
+
+==========================================================================
+item 13  predicados presentes nos TRES top-8 por IOPS: 6
+         cwr_flag_number >
+         fin_count >
+         fin_flag_number >
+         rst_count >
+         rst_flag_number >
+         syn_count >
+  >> CONFERE, sao seis
+
+RESULTADO: o ambiente reproduz os itens 8 a 15.

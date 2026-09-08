@@ -1,0 +1,36 @@
+============================================================================
+OS TRES GRAFOS NAO SUPERVISIONADOS
+============================================================================
+mistura     nos  arestas densidade  betweenness=0  bc maxima lrc maxima    rho L-I
+single       76     4914     0.862       27 de 76     0.3220    13.9241  0.364 p=0.001
+dupla        76     4882     0.856       20 de 76     0.3688    13.3610  0.188 p=0.104
+trio         76     4853     0.851       31 de 76     0.3347    14.3616  0.378 p=0.001
+
+  Somar familias de ataque encolhe e adensa o grafo, de 62 nos a 0,842
+  ate 56 nos a 0,901. A betweenness zera em quase metade dos nos, o que
+  aciona a regra pre-registrada de nao reivindicar predicado de ponte.
+
+============================================================================
+CENTRALIDADE E POLARIDADE NAO SAO A MESMA LEITURA
+============================================================================
+mistura  maior centralidade            lrc       iops   iops mais negativo            lrc       iops
+single   syn_count >               13.9241    -0.6562   cwr_flag_number >          4.1953    -1.8891
+dupla    rst_count >               13.3610    -0.6026   syn_count >               10.0279    -0.7143
+trio     rst_count >               14.3616    -0.8795   cwr_flag_number >          4.1628    -3.8610
+
+  Em nenhuma das tres o predicado mais central e o mais polarizado.
+
+============================================================================
+AS COMUNIDADES COLAPSAM, E O BACKBONE NAO RESGATA
+============================================================================
+  single   grafo cheio, 1 comunidade(s), a maior com 76 de 76 nos
+           backbone com os 10% de arestas mais fortes, 13 comunidades, a maior com 64
+             c1, 64 nos, IOPS medio +0.0022  ->  benign-centric
+  dupla    grafo cheio, 1 comunidade(s), a maior com 76 de 76 nos
+           backbone com os 10% de arestas mais fortes, 17 comunidades, a maior com 60
+             c1, 60 nos, IOPS medio +0.0020  ->  benign-centric
+  trio     grafo cheio, 1 comunidade(s), a maior com 76 de 76 nos
+           backbone com os 10% de arestas mais fortes, 16 comunidades, a maior com 61
+             c1, 61 nos, IOPS medio +0.0118  ->  benign-centric
+
+  Em nenhuma das tres misturas sobrevive comunidade outlier-centric no backbone.

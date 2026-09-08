@@ -1,0 +1,34 @@
+lendo dados/dataset_balanceado_label.csv
+  54677 linhas de treino, 39 features
+  floresta treinada, classes ['Benign', 'DoS/DDoS', 'Reconnaissance', 'Spoofing']
+construindo o DPG. Confira no cabecalho abaixo que saiu
+perc_var=0.001 e decimal_threshold=2, e nao os padroes da biblioteca
+DPG initialized with perc_var=0.001, decimal_threshold=2, n_jobs=-1, graph_construction_mode=aggregated_transitions
+Starting DPG extraction *****************************************
+Model Class: RandomForestClassifier
+Model Class Module: sklearn.ensemble._forest
+Model Estimators:  20
+Model Params:  {'bootstrap': True, 'ccp_alpha': 0.0, 'class_weight': 'balanced', 'criterion': 'gini', 'max_depth': 16, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 2, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 20, 'n_jobs': None, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+*****************************************************************
+Total of paths: 1093540
+Building DPG...
+Extracting graph...
+autoconferencia contra o grafo publicado
+  rotulos lidos de node_metrics
+  publicados 479 nos (479 distintos) | reconstruidos 479 nos (479 distintos)
+  >> CONFERE, rotulo a rotulo
+dados/rf_class_bounds.csv  77 linhas
+  class_name  community_id          feature  lower_bound  upper_bound  range_width
+0     Benign             0             HTTP         -inf         0.05          NaN
+1     Benign             0           Number         -inf        11.00          NaN
+2     Benign             0          Tot sum      2199.50          inf          NaN
+3     Benign             0             Rate        57.68      3729.12      3671.44
+4     Benign             0         Variance      2813.51    831186.41    828372.90
+5     Benign             0         Tot size        62.65       289.80       227.15
+6     Benign             0              IAT         -inf         0.05          NaN
+7     Benign             0  psh_flag_number         -inf         0.37          NaN
+8     Benign             0              Max      1501.50      1502.50         1.00
+9     Benign             0              Std         -inf       573.92          NaN
+dados/rf_predicados_por_classe.csv  (4, 38)
+RESULTADO: class bounds do supervisionado extraidos e conferidos.
+[exited with code 0]

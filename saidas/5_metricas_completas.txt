@@ -1,0 +1,32 @@
+==========================================================================
+### SINGLE ###  ->  dados/if_single_metricas.csv
+  nos 76 | arestas 4914 | betweenness zero em 27 | maior bt 0.3220 | maior lrc 13.9241
+  >> CONFERE com o quarto comando
+  os cinco de IOPS mais negativo, com as centralidades ao lado:
+     cwr_flag_number >        IOPS -1.8891   LRC  4.1953   BT 0.0735
+     rst_count >              IOPS -0.9027   LRC 11.6509   BT 0.1548
+     syn_count >              IOPS -0.6562   LRC 13.9241   BT 0.0535
+     fin_count >              IOPS -0.5446   LRC 10.2259   BT 0.0495
+     IGMP >                   IOPS -0.4946   LRC  4.1023   BT 0.3220
+==========================================================================
+### DUPLA ###  ->  dados/if_dupla_metricas.csv
+  nos 76 | arestas 4882 | betweenness zero em 20 | maior bt 0.3688 | maior lrc 13.3610
+  >> CONFERE com o quarto comando
+  os cinco de IOPS mais negativo, com as centralidades ao lado:
+     syn_count >              IOPS -0.7143   LRC 10.0279   BT 0.0477
+     rst_count >              IOPS -0.6026   LRC 13.3610   BT 0.1131
+     cwr_flag_number >        IOPS -0.5321   LRC  4.5407   BT 0.1255
+     fin_count >              IOPS -0.4330   LRC 11.0340   BT 0.0726
+     rst_flag_number >        IOPS -0.4240   LRC  7.6036   BT 0.1488
+==========================================================================
+### TRIO ###  ->  dados/if_trio_metricas.csv
+  nos 76 | arestas 4853 | betweenness zero em 31 | maior bt 0.3347 | maior lrc 14.3616
+  >> CONFERE com o quarto comando
+  os cinco de IOPS mais negativo, com as centralidades ao lado:
+     cwr_flag_number >        IOPS -3.8610   LRC  4.1628   BT 0.1553
+     rst_count >              IOPS -0.8795   LRC 14.3616   BT 0.1878
+     ece_flag_number >        IOPS -0.8229   LRC  4.2014   BT 0.0892
+     rst_flag_number >        IOPS -0.5122   LRC  7.9499   BT 0.3347
+     syn_count >              IOPS -0.2789   LRC  7.4382   BT 0.0171
+
+RESULTADO: as tres tabelas completas conferem com o quarto comando.

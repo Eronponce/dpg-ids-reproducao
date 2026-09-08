@@ -1,0 +1,28 @@
+lendo dados/dataset_balanceado_label.csv
+  68347 linhas, 39 features, classes ['Benign', 'DoS/DDoS', 'Reconnaissance', 'Spoofing']
+
+================================================================
+A FLORESTA EXPLICADA, 80/20 sem estratificar, semente 42
+================================================================
+  acuracia conferida contra o valor do capitulo
+    obtido   0.905852231163131
+    esperado 0.905852231163131
+    CONFERE
+
+  Tabela de desempenho
+    acuracia                       0.9059
+    macro F1                       0.8646
+    balanced accuracy              0.8605
+    coeficiente de Matthews        0.8571
+    PR-AUC macro um-contra-resto   0.9157
+
+  Tabela por classe
+    classe            precisao revocacao        F1 amostras
+    Benign              0.8220    0.8240    0.8230     3306
+    DoS/DDoS            1.0000    1.0000    1.0000     6794
+    Reconnaissance      0.7367    0.7766    0.7561     2140
+    Spoofing            0.9211    0.8413    0.8794     1430
+
+  DoS/DDoS separa sem um erro e Reconnaissance fica em 0,7561, vinte e
+  quatro pontos de diferenca, e a classe perfeita e a maior. A acuracia
+  de 0,9059 e sobretudo uma afirmacao sobre aquelas 6.794 amostras.

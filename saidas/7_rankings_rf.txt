@@ -1,0 +1,65 @@
+nos 479 | clusters ['Class Benign', 'Class DoS/DDoS', 'Class Reconnaissance', 'Class Spoofing', 'Ambiguous']
+
+dados/rf_rankings_por_classe.csv  479 linhas, 4 classes
+
+==========================================================================
+### Class Benign ###  53 predicados
+  os 5 de maior ALCANCE
+      1  alcance   0.9057  bt 0.0168   Number <= 10.5
+      2  alcance   0.8661  bt 0.0747   HTTP <= 0.05
+      3  alcance   0.8083  bt 0.0092   psh_flag_number <= 0.35
+      4  alcance   0.7892  bt 0.0140   ack_flag_number > 0.35
+      5  alcance   0.7769  bt 0.0230   Header_Length > 11.0
+  os 5 de maior BETWEENNESS
+      1  bt 0.0747  alcance   0.8661   HTTP <= 0.05
+      2  bt 0.0230  alcance   0.7769   Header_Length > 11.0
+      3  bt 0.0168  alcance   0.9057   Number <= 10.5
+      4  bt 0.0163  alcance   0.6098   Max <= 1502.5
+      5  bt 0.0140  alcance   0.7892   ack_flag_number > 0.35
+
+==========================================================================
+### Class DoS/DDoS ###  396 predicados
+  os 5 de maior ALCANCE
+      1  alcance   2.9690  bt 0.0000   Tot sum > 5999.0
+      2  alcance   2.8307  bt 0.0001   ack_flag_number <= 0.59
+      3  alcance   2.6627  bt 0.0017   psh_flag_number <= 0.1
+      4  alcance   2.6048  bt 0.0000   Time_To_Live <= 69.8
+      5  alcance   2.3401  bt 0.0370   HTTPS <= 0.1
+  os 5 de maior BETWEENNESS
+      1  bt 0.2348  alcance   0.6853   Min > 59.0
+      2  bt 0.1763  alcance   1.0282   IAT > 0.0
+      3  bt 0.1209  alcance   0.9180   syn_count <= 0.5
+      4  bt 0.0836  alcance   0.8626   fin_flag_number <= 0.05
+      5  bt 0.0832  alcance   0.7856   psh_flag_number <= 0.25
+
+==========================================================================
+### Class Reconnaissance ###  11 predicados
+  os 5 de maior ALCANCE
+      1  alcance   0.0045  bt 0.0095   syn_count > 1.5
+      2  alcance   0.0039  bt 0.0082   HTTPS <= 0.26
+      3  alcance   0.0034  bt 0.0068   Std <= 55.65
+      4  alcance   0.0028  bt 0.0055   AVG <= 88.1
+      5  alcance   0.0024  bt 0.0020   Tot sum > 1377.0
+  os 5 de maior BETWEENNESS
+      1  bt 0.0095  alcance   0.0045   syn_count > 1.5
+      2  bt 0.0082  alcance   0.0039   HTTPS <= 0.26
+      3  bt 0.0068  alcance   0.0034   Std <= 55.65
+      4  bt 0.0055  alcance   0.0028   AVG <= 88.1
+      5  bt 0.0041  alcance   0.0023   cwr_flag_number <= 0.05
+
+==========================================================================
+### Class Spoofing ###  19 predicados
+  os 5 de maior ALCANCE
+      1  alcance   0.6662  bt 0.0237   SSH <= 0.05
+      2  alcance   0.6329  bt 0.0146   ack_count <= 11.5
+      3  alcance   0.6283  bt 0.0072   Tot size <= 90.95
+      4  alcance   0.6044  bt 0.0143   syn_count <= 3.5
+      5  alcance   0.5961  bt 0.0070   Tot sum > 618.0
+  os 5 de maior BETWEENNESS
+      1  bt 0.0237  alcance   0.6662   SSH <= 0.05
+      2  bt 0.0146  alcance   0.6329   ack_count <= 11.5
+      3  bt 0.0143  alcance   0.6044   syn_count <= 3.5
+      4  bt 0.0103  alcance   0.4945   Min <= 59.0
+      5  bt 0.0072  alcance   0.6283   Tot size <= 90.95
+
+classes em que o predicado mais central pelas duas medidas e o MESMO: 2 de 4

@@ -58,6 +58,102 @@ seriam de outro grafo.
 
 ---
 
+## Os valores que as execuções produzem
+
+O diretório `saidas/` guarda a captura integral do que cada comando imprimiu, na
+execução de 08/09/2026. O que segue é o resumo.
+
+### Cenário supervisionado, Random Forest
+
+Dados: 68.347 linhas, 39 features, quatro macroclasses. Partição 80/20 sem
+estratificar, semente 42.
+
+| medida | valor |
+|---|---|
+| acurácia | `0.905852231163131` |
+| macro F1 | 0,8646 |
+| balanced accuracy | 0,8605 |
+| coeficiente de Matthews | 0,8571 |
+| PR-AUC macro um-contra-resto | 0,9157 |
+
+| classe | precisão | revocação | F1 | amostras |
+|---|---|---|---|---|
+| Benign | 0,8220 | 0,8240 | 0,8230 | 3.306 |
+| DoS/DDoS | 1,0000 | 1,0000 | **1,0000** | 6.794 |
+| Reconnaissance | 0,7367 | 0,7766 | 0,7561 | 2.140 |
+| Spoofing | 0,9211 | 0,8413 | 0,8794 | 1.430 |
+
+DoS/DDoS separa sem um erro e Reconnaissance fica vinte e quatro pontos abaixo.
+A classe perfeita é a maior, então a acurácia de 0,9059 é sobretudo uma
+afirmação sobre aquelas 6.794 amostras.
+
+**Grafo:** 479 nós e 758 arestas, quatro comunidades, uma por classe e nenhuma
+ambígua.
+
+**Correctness 1**, correlação entre as ordenações do grafo e as do modelo, sobre
+38 features presentes nos dois, todas com p < 0,001:
+
+| ordenações comparadas | Spearman | Kendall |
+|---|---|---|
+| permutação × maior centralidade | 0,582 | 0,413 |
+| permutação × centralidade somada | 0,645 | 0,450 |
+| permutação × maior betweenness | 0,624 | 0,433 |
+| impureza × maior centralidade | **0,799** | 0,619 |
+
+A estrutura do grafo concorda mais com a medida **enviesada**, a impureza, do
+que com a não enviesada, a permutação.
+
+**Correctness 2**, cobertura e seletividade contra um piso sorteado:
+
+| classe | predicados | cobertura | razão | cobertura do piso | razão do piso |
+|---|---|---|---|---|---|
+| DoS/DDoS | 395 | 0,653 | 1,03 | 0,684 | 1,03 |
+| Benign | 52 | 0,700 | 1,01 | 0,624 | 1,01 |
+| Spoofing | 18 | 0,625 | 0,97 | 0,611 | 0,98 |
+| Reconnaissance | 10 | 0,513 | 0,81 | 0,580 | 0,91 |
+
+Como conjunto, os predicados de uma classe são indistinguíveis do sorteio. O que
+discrimina é a **ordenação**.
+
+**Class bounds:** 77 linhas, 36 features em DoS/DDoS, 20 em Benign, 12 em
+Spoofing e 9 em Reconnaissance. 36 das 77 com intervalo fechado dos dois lados.
+
+**Ordenações por classe:** 479 predicados. Em **2 das 4 classes** o predicado
+mais central por alcance e por betweenness é o mesmo; nas outras duas as
+medidas apontam para predicados diferentes.
+
+### Cenário não supervisionado, Isolation Forest
+
+Três misturas, cinquenta árvores de isolamento, contaminação 0,01, semente 42.
+Os três grafos têm 76 nós, que são 37 features com as duas direções mais os dois
+nós de classe.
+
+| | simples | dupla | tripla |
+|---|---|---|---|
+| arestas | 4.914 | 4.882 | 4.853 |
+| densidade | 0,8621 | 0,8565 | 0,8514 |
+| betweenness zero em | 27 de 76 | 20 de 76 | 31 de 76 |
+| maior betweenness | 0,3220 | 0,3688 | 0,3347 |
+| maior alcance | 13,9241 | 13,3610 | 14,3616 |
+| onde | `syn_count >` | `rst_count >` | `rst_count >` |
+| comunidades no grafo cheio | 1 | 1 | 1 |
+| maior comunidade no backbone | 64 de 76 | 60 de 76 | 61 de 76 |
+| Spearman alcance × IOP-Score | +0,364 (p 0,001) | +0,188 (p 0,104) | +0,378 (p 0,001) |
+| menor IOP-Score | `cwr_flag_number >` −1,8891 | `syn_count >` −0,7143 | `cwr_flag_number >` −3,8610 |
+
+A fórmula do IOP-Score, `(To Inliers − To Outliers) / In Weight`, reproduz a
+coluna publicada com desvio máximo de `4,4e-16`.
+
+Seis predicados aparecem no top-8 por IOP-Score das **três** misturas:
+`cwr_flag_number >`, `fin_count >`, `fin_flag_number >`, `rst_count >`,
+`rst_flag_number >` e `syn_count >`.
+
+**Class bounds:** 74 linhas por mistura, 37 features de cada lado. Features cujo
+intervalo difere entre *inlier* e *outlier*: 34 de 37 na simples, 36 de 37 na
+dupla, 37 de 37 na tripla.
+
+---
+
 ## Sobre o filtro de features
 
 **Não há filtro.** Os três grafos não supervisionados são construídos sobre os
@@ -88,6 +184,9 @@ sua origem.
 | `if_{single,dupla,trio}_comunidades.csv` | os agrupamentos dos mesmos grafos | saída da DPG-iForest |
 | `if_{single,dupla,trio}_metricas.csv` | os mesmos nós com *IOP-Score*, alcance e *betweenness* juntos | gerado pelo comando 5 |
 | `if_{single,dupla,trio}_class_bounds.csv` | o intervalo de cada feature do lado *inlier* e do lado *outlier* | saída da DPG-iForest, execuções de 08/09/2026 |
+
+Em `saidas/` está o stdout integral de cada um dos sete comandos, na
+execução de 08/09/2026.
 
 O `dataset_balanceado_label.csv` é o arquivo exato de onde saiu o grafo do
 capítulo, e não uma reconstrução. É o que permite que a acurácia bata na décima

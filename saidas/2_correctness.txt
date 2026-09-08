@@ -1,0 +1,39 @@
+floresta conferida, acuracia 0.905852231163131
+
+====================================================================
+CORRECTNESS 1, as ordenacoes do grafo contra as do modelo
+====================================================================
+calculando importancia por permutacao, macro F1, 10 repeticoes...
+
+  ordenacoes comparadas                           Spearman   Kendall
+  permutacao contra maior centralidade               0.582     0.413
+  permutacao contra centralidade somada              0.645     0.450
+  permutacao contra maior betweenness                0.624     0.433
+  impureza contra maior centralidade                 0.799     0.619
+
+  n = 38 features presentes no modelo e no grafo, todas com p < 0,001
+  A estrutura do grafo concorda mais com a medida ENVIESADA, a impureza,
+  do que com a nao enviesada, a permutacao.
+
+  o par que mostra isso sem estatistica
+    Tot sum    permutacao 0.01049   maior centralidade 2.9690   44 predicados
+    Number     permutacao 0.10976   maior centralidade 1.0130   20 predicados
+
+====================================================================
+CORRECTNESS 2, cobertura e seletividade contra um piso sorteado
+====================================================================
+  classe              pred  cobertura    razao   cob piso razao piso
+  DoS/DDoS             395      0.653     1.03      0.684     1.03
+  Benign                52      0.700     1.01      0.624     1.01
+  Spoofing              18      0.625     0.97      0.611     0.98
+  Reconnaissance        10      0.513     0.81      0.580     0.91
+
+  Como conjunto, os predicados atribuidos a uma classe sao indistinguiveis
+  do sorteio. O que discrimina e a ORDENACAO, veja os cinco de maior
+  centralidade do cluster de DoS/DDoS:
+
+    centralidade  2.969   razao  3.37   Tot sum > 5999.0
+    centralidade  2.831   razao  3.19   ack_flag_number <= 0.59
+    centralidade  2.663   razao  1.68   psh_flag_number <= 0.1
+    centralidade  2.605   razao  3.29   Time_To_Live <= 69.8
+    centralidade  2.340   razao  4.02   HTTPS <= 0.1
