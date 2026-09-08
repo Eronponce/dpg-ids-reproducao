@@ -2,7 +2,12 @@ __pycache__/
 *.pyc
 .venv/
 
-# arquivos que o driver embarcado escreve em tempo de execucao
-vendor/dpg_iforest/dataset_treino_70.csv
-vendor/dpg_iforest/global_paths.txt
-vendor/dpg_iforest/FULL_log_df.csv
+# Tudo que aparece na pasta da biblioteca embarcada e transitorio, salvo os
+# arquivos que foram de fato vendorizados. O driver escreve log.txt, que passa
+# de 700 MB, alem de dataset_treino_70.csv, global_paths.txt e FULL_log_df.csv.
+vendor/dpg_iforest/*
+!vendor/dpg_iforest/dpg/
+!vendor/dpg_iforest/dpg_custom.py
+!vendor/dpg_iforest/LICENSE
+!vendor/dpg_iforest/NOTICE.md
+vendor/dpg_iforest/dpg/__pycache__/

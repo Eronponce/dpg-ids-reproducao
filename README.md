@@ -173,6 +173,7 @@ sua origem.
 
 | arquivo | o que é | origem |
 |---|---|---|
+| `CHECKSUMS.sha256` | o SHA-256 dos 34 arquivos de `dados/`, para conferir a cópia | gerado em 08/09/2026 |
 | `dataset_balanceado_label.csv` | 68.347 linhas, 39 features e o rótulo em quatro macroclasses | derivado do `Merged01.csv` do CICIoT2023 |
 | `rf_grafo_nos.csv` | métricas por nó do grafo supervisionado, 479 nós, com alcance e *betweenness* | saída da biblioteca DPG |
 | `rf_grafo_arestas.csv` | as 758 arestas do mesmo grafo, com o peso de co-ocorrência | saída da biblioteca DPG |
