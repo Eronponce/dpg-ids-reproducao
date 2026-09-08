@@ -184,6 +184,8 @@ sua origem.
 | `if_{single,dupla,trio}_comunidades.csv` | os agrupamentos dos mesmos grafos | saída da DPG-iForest |
 | `if_{single,dupla,trio}_metricas.csv` | os mesmos nós com *IOP-Score*, alcance e *betweenness* juntos | gerado pelo comando 5 |
 | `if_{single,dupla,trio}_class_bounds.csv` | o intervalo de cada feature do lado *inlier* e do lado *outlier* | saída da DPG-iForest, execuções de 08/09/2026 |
+| `splits_if/{single,dupla,trio}_train_BEN05_cont001.csv` | os splits de treino das três misturas, 37.170 fluxos cada | partição 70/30 com semente 42 |
+| `splits_if/{single,dupla,trio}_test_fixed_BEN05.csv` | os splits de teste, 24.051 na simples e 31.542 na dupla e na tripla | idem |
 
 Em `saidas/` está o stdout integral de cada um dos sete comandos, na
 execução de 08/09/2026.
@@ -227,6 +229,8 @@ defeito: há cerca de onze mil caminhos de *outlier* contra 1,8 milhão de
 
 **Não reconstrói os grafos não supervisionados.** A biblioteca `DPG-iForest` não
 está no PyPI. Os três grafos vêm prontos em `dados/` e os comandos leem deles.
+Os splits que os originaram estão em `dados/splits_if/`, para quem tiver a
+biblioteca e quiser refazer a construção.
 Quem quiser refazer a construção encontra os parâmetros abaixo. O grafo
 supervisionado, esse sim, é reconstruído pelo comando 6, porque os *class
 bounds* só existem com o objeto de explicação em mãos.
