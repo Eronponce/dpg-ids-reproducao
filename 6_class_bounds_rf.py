@@ -18,6 +18,7 @@ O script se recusa a gravar se nao conseguir conferir o grafo contra o publicado
 Nao existe conferencia parcial: ou bate, ou sai com codigo 1.
 """
 import io
+import os
 import sys
 
 import pandas as pd
@@ -148,7 +149,26 @@ def main():
     bounds = dpg.classwise_feature_bounds_from_communities(explicacao)
     contagens = dpg.class_feature_predicate_counts(explicacao)
 
-    bounds.to_csv("dados/rf_class_bounds.csv", index=False)
+    # A ordem das linhas que a biblioteca devolve NAO e estavel entre execucoes,
+    # e o conteudo e. Sem ordenar, o arquivo mudaria a cada rodada e poluiria o
+    # diff de um repositorio de reproducao.
+    chave = [c for c in ("class_name", "community_id", "feature") if c in bounds.columns]
+    if chave:
+        bounds = bounds.sort_values(chave).reset_index(drop=True)
+
+    alvo = "dados/rf_class_bounds.csv"
+    if os.path.exists(alvo):
+        antigo = pd.read_csv(alvo)
+        if chave and all(c in antigo.columns for c in chave):
+            antigo = antigo.sort_values(chave).reset_index(drop=True)
+        if antigo.equals(bounds):
+            print("  os bounds conferem com os ja publicados, %s" % (bounds.shape,))
+        else:
+            print("  >> DIVERGEM dos ja publicados. Nada foi sobrescrito.")
+            print("     forma %s contra %s" % (bounds.shape, antigo.shape))
+            sys.exit(1)
+
+    bounds.to_csv(alvo, index=False)
     print("\ndados/rf_class_bounds.csv  %d linhas" % len(bounds))
     print(bounds.head(10).to_string())
 
