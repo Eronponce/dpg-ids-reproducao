@@ -85,10 +85,40 @@ sua origem.
 | `if_{single,dupla,trio}_arestas.csv` | as arestas dos mesmos grafos | saída da DPG-iForest |
 | `if_{single,dupla,trio}_comunidades.csv` | os agrupamentos dos mesmos grafos | saída da DPG-iForest |
 | `if_{single,dupla,trio}_metricas.csv` | os mesmos nós com *IOP-Score*, alcance e *betweenness* juntos | gerado pelo comando 5 |
+| `if_{single,dupla,trio}_class_bounds.csv` | o intervalo de cada feature do lado *inlier* e do lado *outlier* | saída da DPG-iForest, execuções de 08/09/2026 |
 
 O `dataset_balanceado_label.csv` é o arquivo exato de onde saiu o grafo do
 capítulo, e não uma reconstrução. É o que permite que a acurácia bata na décima
 quinta casa.
+
+---
+
+## Sobre os *class bounds*
+
+As cinco leituras do método existem agora nos dois cenários.
+
+No não supervisionado elas vinham vazias até 08/09/2026, por dois defeitos
+independentes no driver da `DPG-iForest`.
+
+O primeiro classificava os caminhos comparando uma chave composta,
+`sample{N}_dt{i}`, montada em `dpg/core.py:187`, contra um conjunto de índices de
+amostra. A comparação nunca casava e o log registrava `inliers=0 | outliers=0`.
+O segundo é que, mesmo classificados, os *bounds* só viviam em memória: nada os
+escrevia em disco. Corrigidos os dois, a mistura simples passa a registrar
+`inliers=1839900 | outliers=11188` e os arquivos saem.
+
+O predicado do grafo não carregar limiar não impedia nada. Os *bounds* são
+calculados sobre os **caminhos de decisão**, que preservam o valor porque vêm das
+árvores, e não sobre os rótulos dos nós, que de fato só têm nome e operador.
+
+Cada mistura foi reexecutada com os parâmetros do relatório consolidado de
+04/09/2026, e só foi aceita depois de o grafo reconstruído bater rótulo a rótulo
+com o publicado. Features cujo intervalo difere entre *inlier* e *outlier*:
+34 de 37 na simples, 36 de 37 na dupla, 37 de 37 na tripla.
+
+Algumas regras do lado *outlier* têm limite de um lado só. Isso é o dado, não um
+defeito: há cerca de onze mil caminhos de *outlier* contra 1,8 milhão de
+*inlier*, então há feature que naquele lado só aparece com um operador.
 
 ---
 

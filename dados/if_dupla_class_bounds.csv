@@ -1,0 +1,75 @@
+lado,feature,limite_inferior,limite_superior,regra
+inlier,ARP,0.0,0.31,0.0 < ARP <= 0.31
+inlier,AVG,62.05,3790.19,62.05 < AVG <= 3790.19
+inlier,DHCP,0.03,0.26,0.03 < DHCP <= 0.26
+inlier,DNS,0.01,0.56,0.01 < DNS <= 0.56
+inlier,HTTP,0.01,0.96,0.01 < HTTP <= 0.96
+inlier,HTTPS,0.0,0.99,0.0 < HTTPS <= 0.99
+inlier,Header_Length,11.5,50.62,11.5 < Header_Length <= 50.62
+inlier,IAT,0.01,0.05,0.01 < IAT <= 0.05
+inlier,ICMP,0.01,0.25,0.01 < ICMP <= 0.25
+inlier,IGMP,0.0,0.1,0.0 < IGMP <= 0.1
+inlier,IPv,0.62,0.99,0.62 < IPv <= 0.99
+inlier,IRC,0.08,0.09,0.08 < IRC <= 0.09
+inlier,LLC,0.67,0.99,0.67 < LLC <= 0.99
+inlier,Max,135.5,13421.0,135.5 < Max <= 13421.0
+inlier,Min,60.15,1513.28,60.15 < Min <= 1513.28
+inlier,Number,5.78,95.92,5.78 < Number <= 95.92
+inlier,Rate,20.84,472178.51,20.84 < Rate <= 472178.51
+inlier,SSH,0.0,0.26,0.0 < SSH <= 0.26
+inlier,Std,0.94,5444.15,0.94 < Std <= 5444.15
+inlier,TCP,0.23,0.98,0.23 < TCP <= 0.98
+inlier,Time_To_Live,26.29,241.3,26.29 < Time_To_Live <= 241.3
+inlier,Type,4.54,15.6,4.54 < Type <= 15.6
+inlier,UDP,0.01,0.91,0.01 < UDP <= 0.91
+inlier,Variance,502.22,26395934.65,502.22 < Variance <= 26395934.65
+inlier,ack_count,0.15,74.25,0.15 < ack_count <= 74.25
+inlier,ack_flag_number,0.01,0.99,0.01 < ack_flag_number <= 0.99
+inlier,cwr_flag_number,0.03,0.09,0.03 < cwr_flag_number <= 0.09
+inlier,ece_flag_number,0.01,0.09,0.01 < ece_flag_number <= 0.09
+inlier,fin_count,0.03,75.4,0.03 < fin_count <= 75.4
+inlier,fin_flag_number,0.01,0.71,0.01 < fin_flag_number <= 0.71
+inlier,psh_flag_number,0.0,0.73,0.0 < psh_flag_number <= 0.73
+inlier,rst_count,0.02,85.05,0.02 < rst_count <= 85.05
+inlier,rst_flag_number,0.01,0.78,0.01 < rst_flag_number <= 0.78
+inlier,size,65.77,3403.93,65.77 < size <= 3403.93
+inlier,sum,669.31,32780.62,669.31 < sum <= 32780.62
+inlier,syn_count,0.02,39.15,0.02 < syn_count <= 39.15
+inlier,syn_flag_number,0.01,0.42,0.01 < syn_flag_number <= 0.42
+outlier,ARP,0.0,0.19,0.0 < ARP <= 0.19
+outlier,AVG,62.05,2699.86,62.05 < AVG <= 2699.86
+outlier,DHCP,0.04,inf,DHCP > 0.04
+outlier,DNS,0.06,0.15,0.06 < DNS <= 0.15
+outlier,HTTP,0.02,0.8,0.02 < HTTP <= 0.8
+outlier,HTTPS,0.08,0.99,0.08 < HTTPS <= 0.99
+outlier,Header_Length,15.1,37.14,15.1 < Header_Length <= 37.14
+outlier,IAT,0.0,0.02,0.0 < IAT <= 0.02
+outlier,ICMP,0.03,0.25,0.03 < ICMP <= 0.25
+outlier,IGMP,0.0,inf,IGMP > 0.0
+outlier,IPv,0.84,0.99,0.84 < IPv <= 0.99
+outlier,IRC,-inf,0.1,IRC <= 0.1
+outlier,LLC,0.96,0.99,0.96 < LLC <= 0.99
+outlier,Max,99.61,13421.0,99.61 < Max <= 13421.0
+outlier,Min,61.25,909.45,61.25 < Min <= 909.45
+outlier,Number,35.79,inf,Number > 35.79
+outlier,Rate,40.81,140310.16,40.81 < Rate <= 140310.16
+outlier,SSH,0.01,inf,SSH > 0.01
+outlier,Std,48.02,4027.38,48.02 < Std <= 4027.38
+outlier,TCP,0.23,0.98,0.23 < TCP <= 0.98
+outlier,Time_To_Live,63.07,101.0,63.07 < Time_To_Live <= 101.0
+outlier,Type,9.36,4.54,9.36 < Type <= 4.54
+outlier,UDP,0.07,0.84,0.07 < UDP <= 0.84
+outlier,Variance,551.03,682326.7,551.03 < Variance <= 682326.7
+outlier,ack_count,6.89,9.01,6.89 < ack_count <= 9.01
+outlier,ack_flag_number,0.17,1.0,0.17 < ack_flag_number <= 1.0
+outlier,cwr_flag_number,0.03,inf,cwr_flag_number > 0.03
+outlier,ece_flag_number,0.04,inf,ece_flag_number > 0.04
+outlier,fin_count,0.21,inf,fin_count > 0.21
+outlier,fin_flag_number,0.08,0.43,0.08 < fin_flag_number <= 0.43
+outlier,psh_flag_number,0.07,0.36,0.07 < psh_flag_number <= 0.36
+outlier,rst_count,2.63,inf,rst_count > 2.63
+outlier,rst_flag_number,0.02,0.03,0.02 < rst_flag_number <= 0.03
+outlier,size,65.77,2270.5,65.77 < size <= 2270.5
+outlier,sum,851.17,19193.5,851.17 < sum <= 19193.5
+outlier,syn_count,0.55,1.48,0.55 < syn_count <= 1.48
+outlier,syn_flag_number,0.01,0.1,0.01 < syn_flag_number <= 0.1
