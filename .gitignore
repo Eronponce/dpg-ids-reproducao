@@ -1,3 +1,7 @@
 __pycache__/
 *.pyc
 .venv/
+
+# arquivos que o driver embarcado escreve em tempo de execucao
+vendor/dpg_iforest/dataset_treino_70.csv
+vendor/dpg_iforest/global_paths.txt

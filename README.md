@@ -4,7 +4,7 @@ Este repositório reproduz os números do capítulo de métodos e execuções da
 dissertação **Decision Predicate Graphs para explicabilidade de detecção de
 ataques em redes**.
 
-São **sete comandos**. Nenhum deles precisa de GPU, de credencial ou de baixar
+São **oito comandos**. Nenhum deles precisa de GPU, de credencial ou de baixar
 nada além deste repositório.
 
 ---
@@ -21,7 +21,7 @@ Python 3.10 ou mais novo.
 
 ---
 
-## Os sete comandos
+## Os oito comandos
 
 | # | comando | o que reproduz | tempo |
 |---|---|---|---|
@@ -32,11 +32,12 @@ Python 3.10 ou mais novo.
 | 5 | `python 5_metricas_completas.py` | a tabela por nó com *IOP-Score*, alcance e *betweenness* lado a lado | ~2 min |
 | 6 | `python 6_class_bounds_rf.py` | os *class bounds* do cenário supervisionado, reexecutando o DPG | lento |
 | 7 | `python 7_rankings_rf.py` | as ordenações por classe do supervisionado, por alcance e por *betweenness* | ~5 s |
+| 8 | `python 8_reconstroi_grafos_if.py` | reconstrói os três grafos não supervisionados dos splits e confere contra os publicados | ~50 min por mistura |
 
-Rode na ordem que quiser, são independentes. O sexto é o único que constrói um
-grafo do zero, e por isso é o único demorado.
+Rode na ordem que quiser, são independentes. O sexto e o oitavo constroem
+grafos do zero, e por isso são os demorados.
 
-### Três comandos conferem sozinhos
+### Quatro comandos conferem sozinhos
 
 O **primeiro** imprime a acurácia com quinze casas decimais e a compara com o
 valor do capítulo:
@@ -52,9 +53,10 @@ O **quarto** compara nós, arestas, *betweenness*, alcance e a correlação de
 posto contra os valores publicados, nos três cenários, e sai com código 1 se
 algum divergir.
 
-O **quinto** confere as tabelas que gera contra o quarto, e o **sexto** exige
-que o grafo reconstruído tenha os mesmos nós do já publicado, senão os *bounds*
-seriam de outro grafo.
+O **quinto** confere as tabelas que gera contra o quarto. O **sexto** exige que
+o grafo reconstruído tenha os mesmos nós do já publicado, senão os *bounds*
+seriam de outro grafo. E o **oitavo** compara os grafos que reconstrói contra os
+publicados valor por valor, *IOP-Score* em ponto flutuante incluso.
 
 ---
 
@@ -227,29 +229,38 @@ defeito: há cerca de onze mil caminhos de *outlier* contra 1,8 milhão de
 
 ## O que este repositório NÃO faz, e por quê
 
-**Não reconstrói os grafos não supervisionados.** A biblioteca `DPG-iForest` não
-está no PyPI. Os três grafos vêm prontos em `dados/` e os comandos leem deles.
-Os splits que os originaram estão em `dados/splits_if/`, para quem tiver a
-biblioteca e quiser refazer a construção.
-Quem quiser refazer a construção encontra os parâmetros abaixo. O grafo
-supervisionado, esse sim, é reconstruído pelo comando 6, porque os *class
-bounds* só existem com o objeto de explicação em mãos.
+**Reconstrói os dois grafos, e é aí que a reprodução se fecha.** O comando 6
+reconstrói o grafo supervisionado com a biblioteca `dpg`, fixada em `0.1.6` no
+`requirements.txt` porque a `0.2.0` existe e muda a saída. O comando 8
+reconstrói os três grafos não supervisionados a partir dos splits em
+`dados/splits_if/`.
+
+A `DPG-iForest` **não é distribuída pelo PyPI**, então está embarcada em
+`vendor/dpg_iforest/`, sob licença MIT. O `NOTICE.md` de lá nomeia a origem e
+descreve as duas modificações feitas no driver, ambas posteriores à construção do
+grafo e nenhuma alterando-o. Sem embarcá-la, metade deste repositório não seria
+reproduzível: traria os grafos prontos e nenhuma forma de refazê-los.
 
 **Não calcula nenhuma métrica de plausibilidade.** O capítulo confronta cada
 afirmação do grafo com fontes escritas de segurança e relata o que cada fonte
 respondeu, sem voto, sem média e sem nota. Não há número a automatizar.
 
 **A centralidade do cenário não supervisionado é calculada aqui, não lida.** A
-`DPG-iForest` não computa centralidade. Os comandos 4 e 5 reconstroem cada grafo
-a partir das arestas salvas e aplicam as **mesmas chamadas do `networkx`** que a
-implementação supervisionada usa, que é o que torna os dois cenários
-comparáveis:
+`DPG-iForest` devolve graus, pesos e o *IOP-Score*, e nenhuma centralidade. Os
+comandos 3, 4 e 5 reconstroem cada grafo a partir das arestas salvas e aplicam as
+**mesmas chamadas do `networkx`** que a implementação supervisionada usa em
+`metrics/nodes.py`, parâmetro por parâmetro:
 
 ```python
 nx.betweenness_centrality(G, k=len(G.nodes), normalized=True,
                           weight='weight', endpoints=False)
 nx.local_reaching_centrality(G, n, weight='weight')
 ```
+
+Chamadas idênticas tornam a grandeza **a mesma grandeza** nos dois cenários. Não
+tornam os valores comparáveis um a um: os grafos têm tamanhos diferentes, 479 nós
+contra 76, e a *betweenness* normalizada depende do tamanho. O que atravessa
+entre os cenários é a **ordenação**, não o valor bruto.
 
 ---
 
