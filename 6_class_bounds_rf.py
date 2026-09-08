@@ -1,23 +1,23 @@
 # -*- coding: utf-8 -*-
 """Extrai os class bounds do cenario supervisionado, reexecutando o DPG.
 
-Esta e a unica leitura das cinco que nunca tinha sido salva. As outras quatro do
-supervisionado ja estao em dados/rf_grafo_{nos,arestas,comunidades}. Os class
-bounds exigem o objeto de explicacao, e por isso exigem o DPG rodando, nao dao
-para derivar dos arquivos guardados.
+Esta e a unica das cinco leituras do supervisionado que nunca tinha sido salva.
+As outras quatro ja estao em dados/rf_grafo_{nos,arestas,comunidades}. Os bounds
+exigem o objeto de explicacao, e por isso exigem o DPG rodando: nao dao para
+derivar dos arquivos guardados.
 
-A floresta e a mesma do primeiro comando, mesma particao e mesma semente. Os
-quatro parametros da extracao sao os declarados no capitulo de metodos, a
-frequencia relativa minima de uma variante em 0,001, o arredondamento dos
-valores dos predicados em 2 casas, o modo que agrega variantes antes de contar
-transicoes, e o limiar de absorcao do agrupamento em 0,2.
+A floresta e a mesma do primeiro comando, mesma particao e mesma semente.
 
-O script se autoconfere: o grafo reconstruido tem de ter os mesmos nos e as
-mesmas arestas dos arquivos ja publicados. Se divergir, sai com codigo 1, porque
-entao os bounds seriam de outro grafo.
+ATENCAO AO FORMATO DA CONFIG. Ela e ANINHADA, config['dpg']['default'] e
+config['dpg']['graph_construction']. Um dicionario plano e aceito sem reclamar e
+IGNORADO por inteiro, e a execucao segue com os padroes da biblioteca,
+perc_var=1e-09 e decimal_threshold=6, que produzem um grafo diferente do
+capitulo. Foi o que aconteceu na primeira tentativa, em 08/09/2026.
+
+O script se recusa a gravar se nao conseguir conferir o grafo contra o publicado.
+Nao existe conferencia parcial: ou bate, ou sai com codigo 1.
 """
 import io
-import json
 import sys
 
 import pandas as pd
@@ -28,9 +28,43 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="repla
 
 import dpg  # noqa: E402
 
-PERC_VAR = 0.001
-DECIMAIS = 2
+# os quatro valores declarados no capitulo de metodos
+CONFIG = {
+    "dpg": {
+        "default": {"perc_var": 0.001, "decimal_threshold": 2, "n_jobs": -1},
+        "graph_construction": {"mode": "aggregated_transitions"},
+        "visualization": {},
+    }
+}
 LIMIAR_COMUNIDADE = 0.2
+
+
+def rotulos_do_grafo(d):
+    """Devolve os rotulos dos nos, tentando as formas em que a explicacao os traz.
+
+    Se nao achar, devolve None, e quem chama ABORTA. Nunca 'conferencia parcial'.
+    """
+    nos = d.get("nodes")
+    if nos is not None:
+        try:
+            if hasattr(nos, "columns"):
+                for c in ("Label", "label", "name"):
+                    if c in nos.columns:
+                        return [str(x) for x in nos[c]]
+            if isinstance(nos, (list, tuple)) and nos:
+                if isinstance(nos[0], (list, tuple)) and len(nos[0]) > 1:
+                    return [str(x[1]) for x in nos]
+                return [str(x) for x in nos]
+        except Exception as e:
+            print("  falha ao ler 'nodes': %s" % e)
+
+    g = d.get("graph")
+    if g is not None and hasattr(g, "nodes"):
+        try:
+            return [str(g.nodes[n].get("label", n)) for n in g.nodes()]
+        except Exception as e:
+            print("  falha ao ler 'graph': %s" % e)
+    return None
 
 
 def main():
@@ -50,50 +84,53 @@ def main():
     alvos = [str(c) for c in rf.classes_]
     print("  floresta treinada, classes %s" % alvos)
 
-    cfg = {"perc_var": PERC_VAR, "decimal_threshold": DECIMAIS,
-           "num_processes": 1, "model_type": "classifier"}
-    print("\nconstruindo o DPG, isto e a parte demorada")
-    expl = dpg.DPGExplainer(rf, feature_names=feats, target_names=alvos, dpg_config=cfg)
+    print("\nconstruindo o DPG. Confira no cabecalho abaixo que saiu")
+    print("perc_var=0.001 e decimal_threshold=2, e nao os padroes da biblioteca")
+    expl = dpg.DPGExplainer(rf, feature_names=feats, target_names=alvos,
+                            dpg_config=CONFIG)
     explicacao = expl.explain_global(X_tr, communities=True,
                                      community_threshold=LIMIAR_COMUNIDADE)
+    d = explicacao.as_dict()
 
-    d = explicacao.as_dict() if hasattr(explicacao, "as_dict") else {}
-    print("  chaves da explicacao: %s" % sorted(d.keys()))
+    # ---------- autoconferencia, sem meio termo ----------
+    print("\nautoconferencia contra o grafo publicado")
+    pub = pd.read_csv("dados/rf_grafo_nos.csv")
+    rot_pub = sorted(str(x) for x in pub["Label"])
+    rot_novo = rotulos_do_grafo(d)
 
+    if rot_novo is None:
+        print("  NAO consegui ler os rotulos do grafo reconstruido.")
+        print("  chaves disponiveis: %s" % sorted(d.keys()))
+        print("  ABORTANDO sem gravar. Bounds nao conferidos nao servem.")
+        sys.exit(1)
+
+    rot_novo = sorted(rot_novo)
+    print("  publicados %d nos | reconstruidos %d nos" % (len(rot_pub), len(rot_novo)))
+    if rot_novo != rot_pub:
+        so_novo = set(rot_novo) - set(rot_pub)
+        so_pub = set(rot_pub) - set(rot_novo)
+        print("  >> DIVERGE. %d rotulos so no novo, %d so no publicado"
+              % (len(so_novo), len(so_pub)))
+        for x in list(so_novo)[:5]:
+            print("       so no novo: %s" % x)
+        for x in list(so_pub)[:5]:
+            print("       so no publicado: %s" % x)
+        print("  ABORTANDO sem gravar. Os bounds seriam de outro grafo.")
+        sys.exit(1)
+    print("  >> CONFERE, rotulo a rotulo")
+
+    # ---------- so agora grava ----------
     bounds = dpg.classwise_feature_bounds_from_communities(explicacao)
     contagens = dpg.class_feature_predicate_counts(explicacao)
 
-    # ---------- autoconferencia contra o grafo ja publicado ----------
-    nos_pub = pd.read_csv("dados/rf_grafo_nos.csv")
-    print("\nautoconferencia contra o grafo publicado")
-    print("  nos publicados %d" % len(nos_pub))
-    G = getattr(expl, "graph", None) or getattr(expl, "dpg", None)
-    if G is not None and hasattr(G, "number_of_nodes"):
-        print("  nos reconstruidos %d | arestas %d"
-              % (G.number_of_nodes(), G.number_of_edges()))
-        if G.number_of_nodes() != len(nos_pub):
-            print("  >> DIVERGE, os bounds seriam de outro grafo")
-            sys.exit(1)
-        print("  >> CONFERE")
-    else:
-        print("  nao consegui alcancar o grafo pelo explainer, conferencia parcial")
+    bounds.to_csv("dados/rf_class_bounds.csv", index=False)
+    print("\ndados/rf_class_bounds.csv  %d linhas" % len(bounds))
+    print(bounds.head(10).to_string())
 
-    # ---------- grava ----------
-    if hasattr(bounds, "to_csv"):
-        bounds.to_csv("dados/rf_class_bounds.csv", index=True)
-        print("\ndados/rf_class_bounds.csv  %d linhas" % len(bounds))
-        print(bounds.head(12).to_string())
-    else:
-        io.open("dados/rf_class_bounds.json", "w", encoding="utf-8").write(
-            json.dumps(bounds, indent=2, ensure_ascii=False, default=str))
-        print("\ndados/rf_class_bounds.json gravado")
-        print(json.dumps(bounds, indent=2, ensure_ascii=False, default=str)[:1800])
+    contagens.to_csv("dados/rf_predicados_por_classe.csv", index=True)
+    print("\ndados/rf_predicados_por_classe.csv  %s" % (contagens.shape,))
 
-    if hasattr(contagens, "to_csv"):
-        contagens.to_csv("dados/rf_predicados_por_classe.csv", index=True)
-        print("\ndados/rf_predicados_por_classe.csv  %s" % (contagens.shape,))
-
-    print("\nRESULTADO: class bounds do supervisionado extraidos.")
+    print("\nRESULTADO: class bounds do supervisionado extraidos e conferidos.")
 
 
 if __name__ == "__main__":
