@@ -141,27 +141,16 @@ def gera(alvo, arquivo, ar, classe):
     linhas = linhas_da_arvore(alvo, ar)
     ent = ar[ar["Node_v_label"] == alvo]
 
-    ylim = len(linhas) * LINHA + 20
+    ylim = len(linhas) * LINHA + 9
     alt_in = W * ylim / 100.0
     fig, ax = plt.subplots(figsize=(W, alt_in))
     ax.set_xlim(0, 100)
     ax.set_ylim(0, ylim)
     ax.axis("off")
 
-    if len(ent) == 0:
-        cab = "root of the graph, nothing enters it"
-    elif len(ent) == 1:
-        cab = "%s traversals enter from %s" % (fmt(ent.iloc[0]["Weight"]),
-                                               ent.iloc[0]["Node_u_label"])
-    else:
-        cab = "%d edges enter it, %s traversals in all" % (
-            len(ent), fmt(ent["Weight"].sum()))
-    ax.text(2, ylim - 6, cab, ha="left", va="center", fontsize=FS_NOTA,
-            color=MUTED, style="italic", zorder=5)
-
-    y = ylim - 16
+    y = ylim - 6
     pos = {}
-    for nivel, rot, peso, forte in linhas:
+    for k, (nivel, rot, peso, forte) in enumerate(linhas):
         x = 2 + nivel * RECUO
         w = medir(fig, ax, rot, FS_NO) + 4.0
         if nivel > 0:
