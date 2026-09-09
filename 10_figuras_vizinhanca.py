@@ -99,6 +99,26 @@ def cotovelo(ax, x_pai, y_pai, x_filho, y_filho, peso, forte):
                                 edgecolor="none", alpha=0.95))
 
 
+def entrada(ax, x_pai, y_pai, x_filho, y_filho, w_filho, peso, faixa):
+    """Conector de quem ENTRA: desce do pai, corre numa faixa propria e aponta
+    no topo do filho. Cada pai usa uma faixa diferente para as horizontais nao
+    se sobreporem."""
+    xm = x_filho + w_filho / 2.
+    ym = y_filho + ALT_CX / 2. + 2.0 + faixa * 1.8
+    ax.plot([x_pai, x_pai, xm, xm],
+            [y_pai - ALT_CX / 2. - 0.3, ym, ym, y_filho + ALT_CX / 2. + 1.2],
+            color=PALE, linewidth=0.8, zorder=3, solid_capstyle="butt",
+            solid_joinstyle="round")
+    ax.add_patch(FancyArrowPatch((xm, y_filho + ALT_CX / 2. + 1.4),
+                                 (xm, y_filho + ALT_CX / 2. + 0.3),
+                                 arrowstyle="-|>", mutation_scale=8, linewidth=0.8,
+                                 color=PALE, shrinkA=0, shrinkB=0, zorder=3))
+    ax.text(x_pai + 1.1, ym + 0.7, fmt(peso), ha="left", va="bottom",
+            fontsize=FS_MINI, color=MUTED, zorder=7,
+            bbox=dict(boxstyle="round,pad=0.10", facecolor="white",
+                      edgecolor="none", alpha=0.95))
+
+
 def linhas_da_arvore(alvo, ar):
     """[(nivel, rotulo, peso da aresta que chega, forte)] em ordem de PROFUNDIDADE.
 
@@ -141,12 +161,20 @@ def gera(alvo, arquivo, ar, classe):
     linhas = linhas_da_arvore(alvo, ar)
     ent = ar[ar["Node_v_label"] == alvo]
 
-    ylim = len(linhas) * LINHA + 9
+    n_ent = min(len(ar[ar['Node_v_label'] == alvo]), 4)
+    ylim = (len(linhas) + n_ent) * LINHA + 9 + (2.0 + min(n_ent, 4) * 1.8)
     alt_in = W * ylim / 100.0
     fig, ax = plt.subplots(figsize=(W, alt_in))
     ax.set_xlim(0, 100)
     ax.set_ylim(0, ylim)
     ax.axis("off")
+
+    # quem ENTRA na raiz, desenhado ACIMA dela. Sem isso a figura mostra so o
+    # que sai e contradiz o texto, que fala de aresta entrando e saindo
+    pais = ar[ar["Node_v_label"] == alvo].sort_values("Weight", ascending=False)
+    MAX_PAIS = 4
+    n_pais = min(len(pais), MAX_PAIS)
+    extra = len(pais) - n_pais
 
     # primeira passada: mede tudo para saber a largura ocupada, e centraliza.
     # a figura tem largura fixa de textwidth, entao sem isso a arvore fica
@@ -156,6 +184,22 @@ def gera(alvo, arquivo, ar, classe):
     esq = max(2.0, (100.0 - ocupado) / 2.0)
 
     y = ylim - 6
+    if n_pais:
+        # so os pais que cabem, e nenhuma caixa de resumo: uma caixa `e mais N`
+        # nao tem seta e fica boiando como se fosse um predicado
+        rot_pais = [str(r["Node_u_label"]) for _, r in pais.head(n_pais).iterrows()]
+        folga = 2.0 + n_pais * 1.8
+        y_raiz = y - len(rot_pais) * LINHA - folga
+        w_raiz = medir(fig, ax, linhas[0][1], FS_NO) + 4.0
+        for k2, r2 in enumerate(rot_pais):
+            wp = medir(fig, ax, r2, FS_NO) + 4.0
+            xp = esq
+            box(ax, xp, y, wp, r2)
+            if True:
+                entrada(ax, xp + 1.8, y, esq, y_raiz, w_raiz,
+                        float(pais.iloc[k2]["Weight"]), n_pais - 1 - k2)
+            y -= LINHA
+        y -= folga
     pos = {}
     for k, ((nivel, rot, peso, forte), w) in enumerate(zip(linhas, larguras)):
         x = esq + nivel * RECUO
