@@ -148,11 +148,17 @@ def gera(alvo, arquivo, ar, classe):
     ax.set_ylim(0, ylim)
     ax.axis("off")
 
+    # primeira passada: mede tudo para saber a largura ocupada, e centraliza.
+    # a figura tem largura fixa de textwidth, entao sem isso a arvore fica
+    # encostada na margem esquerda e sobra um vazio grande a direita
+    larguras = [medir(fig, ax, r, FS_NO) + 4.0 for _, r, _, _ in linhas]
+    ocupado = max(n * RECUO + w for (n, _, _, _), w in zip(linhas, larguras))
+    esq = max(2.0, (100.0 - ocupado) / 2.0)
+
     y = ylim - 6
     pos = {}
-    for k, (nivel, rot, peso, forte) in enumerate(linhas):
-        x = 2 + nivel * RECUO
-        w = medir(fig, ax, rot, FS_NO) + 4.0
+    for k, ((nivel, rot, peso, forte), w) in enumerate(zip(linhas, larguras)):
+        x = esq + nivel * RECUO
         if nivel > 0:
             xp, yp = pos[nivel - 1]
             cotovelo(ax, xp + 1.8, yp, x, y, peso, forte)
