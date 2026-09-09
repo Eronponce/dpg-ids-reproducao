@@ -1,0 +1,23 @@
+{
+  "faithfulness_score": 0.8384164761679793,
+  "weights": "{'output_fidelity': 0.35, 'trace_coverage': 0.3, 'anti_recombination': 0.2, 'evidence_margin': 0.15}",
+  "n_samples": 300.0,
+  "n_successful": 300.0,
+  "n_local_failures": 0.0,
+  "output_fidelity": 0.9766666666666667,
+  "mean_node_recall": 0.6927556562256164,
+  "mean_node_precision": 1.0,
+  "mean_edge_recall": 0.5190841745074054,
+  "mean_edge_precision": 1.0,
+  "mean_trace_coverage_score": 0.6059199153665109,
+  "mean_recombination_rate": 0.0,
+  "mean_vote_confidence": 0.8714999999999999,
+  "mean_evidence_score_pred": 0.8623641368537651,
+  "mean_evidence_score_margin": 0.7653811214979515,
+  "mean_evidence_margin_pred_vs_competitor": 0.7653730964042615,
+  "mean_path_purity": 0.0,
+  "mean_competitor_exposure": 0.0,
+  "mean_explanation_confidence": 0.0,
+  "per_sample": "     sample_id      model_pred  ... error  correct\n0            0          Benign  ...  None     True\n1            1  Reconnaissance  ...  None     True\n2            2  Reconnaissance  ...  None     True\n3            3  Reconnaissance  ...  None     True\n4            4        DoS/DDoS  ...  None     True\n..         ...             ...  ...   ...      ...\n295        295        DoS/DDoS  ...  None     True\n296        296  Reconnaissance  ...  None     True\n297        297        DoS/DDoS  ...  None     True\n298        298        DoS/DDoS  ...  None     True\n299        299          Benign  ...  None     True\n\n[300 rows x 20 columns]",
+  "local_accuracy": 0.8933333333333333
+}
