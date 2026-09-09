@@ -138,6 +138,47 @@ for c in ["DoS/DDoS", "Benign", "Spoofing", "Reconnaissance"]:
           % (c, len(g), g.cobertura.mean(), g.razao.replace(np.inf, np.nan).median(),
              gc.cobertura.mean(), gc.razao.median()))
 
+# ------------------------------- a tabela por predicado, gravada para o Capitulo 4
+# Quatro pares por predicado, nao so o da comunidade: a razao sai de contar fluxos
+# e nao precisa da atribuicao de classe do grafo. Com as quatro colunas o predicado
+# deixa de "ser de uma classe" e passa a ter uma razao em cada uma.
+#
+# As contagens cruas vao junto de proposito. Quando a seletividade e zero a razao
+# e indefinida, e `0 de 6876 fluxos fora da classe` diz o que `inf` nao diz. A
+# celula fica VAZIA em vez de infinita, para nao contaminar media nem correlacao.
+bt = dict(zip(nos["Label"], nos["Betweenness centrality"]))
+tabela = []
+for rot in nos["Label"]:
+    k = avalia(rot)
+    if k is None:
+        continue
+    mm = PAD.match(str(rot).strip())
+    for c in sorted(set(yte)):
+        alvo_c = (yte == c)
+        n_dentro, n_fora = int(k[alvo_c].sum()), int(k[~alvo_c].sum())
+        n_cl, n_ncl = int(alvo_c.sum()), int((~alvo_c).sum())
+        cob, sel = n_dentro / n_cl, n_fora / n_ncl
+        tabela.append({
+            "classe": c, "predicado": rot, "feature": mm.group(1).strip(),
+            "lrc": float(lrc.get(rot, np.nan)), "betweenness": float(bt.get(rot, np.nan)),
+            "n_dentro": n_dentro, "n_classe": n_cl,
+            "n_fora": n_fora, "n_nao_classe": n_ncl,
+            "cobertura": cob, "seletividade": sel,
+            "razao": (cob / sel) if sel > 0 else np.nan,
+            "sem_contraexemplo": sel == 0,
+        })
+tab = pd.DataFrame(tabela)
+tab.to_csv("dados/rf_cobertura_seletividade.csv", index=False)
+print("\n  gravado dados/rf_cobertura_seletividade.csv, %d linhas, %d predicados x %d classes"
+      % (len(tab), tab.predicado.nunique(), tab.classe.nunique()))
+sc = tab[tab.sem_contraexemplo]
+print("  %d linhas sem contraexemplo, razao indefinida, todas em %s"
+      % (len(sc), ", ".join(sorted(sc.classe.unique()))))
+print("  as cinco de maior cobertura entre elas:")
+for _, r in sc.nlargest(5, "cobertura").iterrows():
+    print("     %-22s %-16s vale em %d de %d dentro, e em %d de %d fora"
+          % (r.predicado, r.classe, r.n_dentro, r.n_classe, r.n_fora, r.n_nao_classe))
+
 print("\n  Como conjunto, os predicados atribuidos a uma classe sao indistinguiveis")
 print("  do sorteio. O que discrimina e a ORDENACAO, veja os cinco de maior")
 print("  centralidade do cluster de DoS/DDoS:\n")
