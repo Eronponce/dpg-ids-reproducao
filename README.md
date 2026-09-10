@@ -26,7 +26,6 @@ Python 3.10 ou mais novo.
 | # | comando | o que reproduz | tempo |
 |---|---|---|---|
 | 1 | `python 1_random_forest.py` | desempenho da floresta e resultado por classe | ~5 s |
-| 2 | `python 2_correctness.py` | as duas medidas de *Correctness* e o controle negativo por sorteio | ~1 min |
 | 3 | `python 3_isolation_forest.py` | as comunidades dos três grafos não supervisionados e o *backbone* | ~1 min |
 | 4 | `python 4_grafos_sem_filtro.py` | as leituras dos três grafos não supervisionados, com autoconferência | ~2 min |
 | 5 | `python 5_metricas_completas.py` | a tabela por nó com *IOP-Score*, alcance e *betweenness* lado a lado | ~2 min |
@@ -92,31 +91,6 @@ afirmação sobre aquelas 6.794 amostras.
 **Grafo:** 479 nós e 758 arestas, quatro comunidades, uma por classe e nenhuma
 ambígua.
 
-**Correctness 1**, correlação entre as ordenações do grafo e as do modelo, sobre
-38 features presentes nos dois, todas com p < 0,001:
-
-| ordenações comparadas | Spearman | Kendall |
-|---|---|---|
-| permutação × maior centralidade | 0,582 | 0,413 |
-| permutação × centralidade somada | 0,645 | 0,450 |
-| permutação × maior betweenness | 0,624 | 0,433 |
-| impureza × maior centralidade | **0,799** | 0,619 |
-
-A estrutura do grafo concorda mais com a medida **enviesada**, a impureza, do
-que com a não enviesada, a permutação.
-
-**Correctness 2**, cobertura e seletividade contra um piso sorteado:
-
-| classe | predicados | cobertura | razão | cobertura do piso | razão do piso |
-|---|---|---|---|---|---|
-| DoS/DDoS | 395 | 0,653 | 1,03 | 0,684 | 1,03 |
-| Benign | 52 | 0,700 | 1,01 | 0,624 | 1,01 |
-| Spoofing | 18 | 0,625 | 0,97 | 0,611 | 0,98 |
-| Reconnaissance | 10 | 0,513 | 0,81 | 0,580 | 0,91 |
-
-Como conjunto, os predicados de uma classe são indistinguíveis do sorteio. O que
-discrimina é a **ordenação**.
-
 **Class bounds:** 77 linhas, 36 features em DoS/DDoS, 20 em Benign, 12 em
 Spoofing e 9 em Reconnaissance. 36 das 77 com intervalo fechado dos dois lados.
 
@@ -173,7 +147,7 @@ sua origem.
 
 | arquivo | o que é | origem |
 |---|---|---|
-| `CHECKSUMS.sha256` | o SHA-256 dos 34 arquivos de `dados/`, para conferir a cópia | gerado em 08/09/2026 |
+| `CHECKSUMS.sha256` | o SHA-256 dos 29 arquivos de `dados/`, para conferir a cópia | gerado em 08/09/2026 |
 | `dataset_balanceado_label.csv` | 68.347 linhas, 39 features e o rótulo em quatro macroclasses | derivado do `Merged01.csv` do CICIoT2023 |
 | `rf_grafo_nos.csv` | métricas por nó do grafo supervisionado, 479 nós, com alcance e *betweenness* | saída da biblioteca DPG |
 | `rf_grafo_arestas.csv` | as 758 arestas do mesmo grafo, com o peso de co-ocorrência | saída da biblioteca DPG |
@@ -181,7 +155,6 @@ sua origem.
 | `rf_rankings_por_classe.csv` | cada predicado com sua classe e sua posição por alcance e por *betweenness* | gerado pelo comando 7 |
 | `rf_class_bounds.csv` | o intervalo de cada feature por classe, 77 linhas em quatro comunidades | gerado pelo comando 6 |
 | `rf_predicados_por_classe.csv` | quantos predicados cada classe usa de cada feature | gerado pelo comando 6 |
-| `rf_cobertura_seletividade.csv` e demais `rf_controle_*`, `rf_importancia_*`, `rf_sensibilidade_*` | as tabelas de *Correctness* e seus controles | gerados pelo comando 2 |
 | `if_{single,dupla,trio}_nos.csv` | métricas por nó dos três grafos não supervisionados, 76 nós, com o *IOP-Score* | saída da DPG-iForest, execuções de 04/09/2026 |
 | `if_{single,dupla,trio}_arestas.csv` | as arestas dos mesmos grafos | saída da DPG-iForest |
 | `if_{single,dupla,trio}_comunidades.csv` | os agrupamentos dos mesmos grafos | saída da DPG-iForest |

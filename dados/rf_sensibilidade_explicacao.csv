@@ -1,5 +1,0 @@
-perc_var,decimal_threshold,nos,arestas,predicados,features,comunidades,lrc_max,segundos,features_comuns,spearman_vs_base
-0.005,2,108,140,105,29,4,0.8726,501.6,29,0.871
-0.001,2,479,758,475,38,5,2.969,299.6,38,1.0
-0.001,3,436,655,432,36,5,2.3119,535.3,36,0.966
-0.0005,2,908,1675,904,38,5,5.7787,566.1,38,0.987
