@@ -110,8 +110,12 @@ def entrada(ax, x_tronco, y_pai, w_pai, peso):
                                  (x_tronco + 0.6, y_pai),
                                  arrowstyle="-|>", mutation_scale=7, linewidth=0.8,
                                  color=PALE, shrinkA=0, shrinkB=0, zorder=3))
-    ax.text(x_tronco + RECUO + w_pai + 1.2, y_pai, fmt(peso), ha="left",
-            va="center", fontsize=FS_MINI, color=MUTED, zorder=7)
+    # o peso vai SOBRE a seta horizontal, do mesmo jeito que o dos filhos, e nao
+    # solto a direita da caixa
+    ax.text(x_tronco + (RECUO - 0.4) / 2., y_pai + 1.2, fmt(peso), ha="center",
+            va="bottom", fontsize=FS_MINI, color=MUTED, zorder=7,
+            bbox=dict(boxstyle="round,pad=0.10", facecolor="white",
+                      edgecolor="none", alpha=0.95))
 
 
 def linhas_da_arvore(alvo, ar):
