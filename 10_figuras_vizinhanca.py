@@ -99,24 +99,19 @@ def cotovelo(ax, x_pai, y_pai, x_filho, y_filho, peso, forte):
                                 edgecolor="none", alpha=0.95))
 
 
-def entrada(ax, x_pai, y_pai, x_filho, y_filho, w_filho, peso, faixa):
-    """Conector de quem ENTRA: desce do pai, corre numa faixa propria e aponta
-    no topo do filho. Cada pai usa uma faixa diferente para as horizontais nao
-    se sobreporem."""
-    xm = x_filho + w_filho / 2.
-    ym = y_filho + ALT_CX / 2. + 2.0 + faixa * 1.8
-    ax.plot([x_pai, x_pai, xm, xm],
-            [y_pai - ALT_CX / 2. - 0.3, ym, ym, y_filho + ALT_CX / 2. + 1.2],
-            color=PALE, linewidth=0.8, zorder=3, solid_capstyle="butt",
-            solid_joinstyle="round")
-    ax.add_patch(FancyArrowPatch((xm, y_filho + ALT_CX / 2. + 1.4),
-                                 (xm, y_filho + ALT_CX / 2. + 0.3),
-                                 arrowstyle="-|>", mutation_scale=8, linewidth=0.8,
+def entrada(ax, x_tronco, y_pai, w_pai, peso):
+    """Conector de quem ENTRA, espelhando o dos filhos: o pai fica recuado a
+    direita, corre para a esquerda ate o tronco, e o tronco desce ate o no. Todos
+    os pais compartilham o mesmo tronco, do mesmo jeito que os filhos, entao as
+    duas metades da figura tem a mesma gramatica."""
+    ax.plot([x_tronco, x_tronco + RECUO - 0.4], [y_pai, y_pai],
+            color=PALE, linewidth=0.8, zorder=3, solid_capstyle="butt")
+    ax.add_patch(FancyArrowPatch((x_tronco + RECUO - 0.4, y_pai),
+                                 (x_tronco + 0.6, y_pai),
+                                 arrowstyle="-|>", mutation_scale=7, linewidth=0.8,
                                  color=PALE, shrinkA=0, shrinkB=0, zorder=3))
-    ax.text(x_pai + 1.1, ym + 0.7, fmt(peso), ha="left", va="bottom",
-            fontsize=FS_MINI, color=MUTED, zorder=7,
-            bbox=dict(boxstyle="round,pad=0.10", facecolor="white",
-                      edgecolor="none", alpha=0.95))
+    ax.text(x_tronco + RECUO + w_pai + 1.2, y_pai, fmt(peso), ha="left",
+            va="center", fontsize=FS_MINI, color=MUTED, zorder=7)
 
 
 def linhas_da_arvore(alvo, ar):
@@ -161,8 +156,8 @@ def gera(alvo, arquivo, ar, classe):
     linhas = linhas_da_arvore(alvo, ar)
     ent = ar[ar["Node_v_label"] == alvo]
 
-    n_ent = min(len(ar[ar['Node_v_label'] == alvo]), 4)
-    ylim = (len(linhas) + n_ent) * LINHA + 9 + (2.0 + min(n_ent, 4) * 1.8)
+    n_ent = len(ar[ar['Node_v_label'] == alvo])
+    ylim = (len(linhas) + n_ent) * LINHA + 12
     alt_in = W * ylim / 100.0
     fig, ax = plt.subplots(figsize=(W, alt_in))
     ax.set_xlim(0, 100)
@@ -180,26 +175,34 @@ def gera(alvo, arquivo, ar, classe):
     # a figura tem largura fixa de textwidth, entao sem isso a arvore fica
     # encostada na margem esquerda e sobra um vazio grande a direita
     larguras = [medir(fig, ax, r, FS_NO) + 4.0 for _, r, _, _ in linhas]
-    ocupado = max(n * RECUO + w for (n, _, _, _), w in zip(linhas, larguras))
+    larg_pais = [medir(fig, ax, str(r["Node_u_label"]), FS_NO) + 4.0
+                 for _, r in pais.iterrows()]
+    ocupado = max([n * RECUO + w for (n, _, _, _), w in zip(linhas, larguras)]
+                  + [RECUO + w for w in larg_pais] + [0])
     esq = max(2.0, (100.0 - ocupado) / 2.0)
 
     y = ylim - 6
-    if n_pais:
-        # so os pais que cabem, e nenhuma caixa de resumo: uma caixa `e mais N`
-        # nao tem seta e fica boiando como se fosse um predicado
-        rot_pais = [str(r["Node_u_label"]) for _, r in pais.head(n_pais).iterrows()]
-        folga = 2.0 + n_pais * 1.8
-        y_raiz = y - len(rot_pais) * LINHA - folga
+    if len(pais):
+        # TODOS os pais, sem corte. Sem eles a soma do que entra nao fecha, e o
+        # texto cita percentagens cujo denominador ficaria fora da figura
+        rot_pais = [str(r["Node_u_label"]) for _, r in pais.iterrows()]
         w_raiz = medir(fig, ax, linhas[0][1], FS_NO) + 4.0
+        x_tronco = esq + 1.8
+        y_topo_pais = y
         for k2, r2 in enumerate(rot_pais):
             wp = medir(fig, ax, r2, FS_NO) + 4.0
-            xp = esq
-            box(ax, xp, y, wp, r2)
-            if True:
-                entrada(ax, xp + 1.8, y, esq, y_raiz, w_raiz,
-                        float(pais.iloc[k2]["Weight"]), n_pais - 1 - k2)
+            box(ax, esq + RECUO, y, wp, r2)
+            entrada(ax, x_tronco, y, wp, float(pais.iloc[k2]["Weight"]))
             y -= LINHA
-        y -= folga
+        y_raiz = y - 1.2
+        # o tronco que junta os pais e desce ate o no
+        ax.plot([x_tronco, x_tronco], [y_topo_pais, y_raiz + ALT_CX / 2. + 1.3],
+                color=PALE, linewidth=0.8, zorder=3, solid_capstyle="butt")
+        ax.add_patch(FancyArrowPatch((x_tronco, y_raiz + ALT_CX / 2. + 1.5),
+                                     (x_tronco, y_raiz + ALT_CX / 2. + 0.3),
+                                     arrowstyle="-|>", mutation_scale=8, linewidth=0.8,
+                                     color=PALE, shrinkA=0, shrinkB=0, zorder=3))
+        y = y_raiz
     pos = {}
     for k, ((nivel, rot, peso, forte), w) in enumerate(zip(linhas, larguras)):
         x = esq + nivel * RECUO
