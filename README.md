@@ -21,7 +21,7 @@ Python 3.10 ou mais novo.
 
 ---
 
-## Os oito comandos
+## Os comandos
 
 | # | comando | o que reproduz | tempo |
 |---|---|---|---|
@@ -32,9 +32,25 @@ Python 3.10 ou mais novo.
 | 6 | `python 6_class_bounds_rf.py` | os *class bounds* do cenário supervisionado, reexecutando o DPG | lento |
 | 7 | `python 7_rankings_rf.py` | as ordenações por classe do supervisionado, por alcance e por *betweenness* | ~5 s |
 | 8 | `python 8_reconstroi_grafos_if.py` | reconstrói os três grafos não supervisionados dos splits e confere contra os publicados | ~50 min por mistura |
+| 9 | `python 9_faithfulness_rf.py` | a Correctness que sai da própria DPG, sem medida inventada aqui | ~3 min |
+| 10 | `python 10_figuras_vizinhanca.py` | as árvores de co-ocorrência dos predicados do cenário supervisionado | ~30 s |
+| 11 | `python 11_betweenness_topologia.py` | por que a *betweenness* do `ack_flag_number <= 0.59` é quase zero | ~10 s |
+| 12 | `python 12_spoofing.py` | a evidência da subseção de Spoofing | ~10 s |
+| 13 | `python 13_figura_destino_if.py` | para onde vai o peso dos dois extremos de IOPS de cada mistura | ~20 s |
+| 13 | `python 13_figura_vizinhanca_if.py` | a vizinhança dos dois predicados mais negativos de cada mistura | ~20 s |
+| 14 | `python 14_figura_esquema_if.py` | o esquema que ensina a ler as figuras do cenário não supervisionado | ~10 s |
+| 15 | `python 15_figura_diferencial_if.py` | as três figuras da camada diferencial, que entram no Capítulo 4 | ~20 s |
+| 16 | `python 16_medidas_dissertacao.py` | recalcula do dataset cada número medido do Capítulo 4 e compara com o publicado | ~40 s |
 
 Rode na ordem que quiser, são independentes. O sexto e o oitavo constroem
-grafos do zero, e por isso são os demorados.
+grafos do zero, e por isso são os demorados. Os dois numerados 13 são
+figuras intermediárias que acabaram não entrando no texto, e ficam
+versionadas só como histórico; a figura que o Capítulo 4 usa é a do 15.
+
+O **décimo sexto** é o que fecha a reprodutibilidade do Capítulo 4. Ele não
+produz figura nem tabela: refaz do dataset cada número medido que entrou no
+texto, compara com o valor publicado e imprime `OK` ou `DIVERGE` em cada
+linha, saindo com código 1 se algo divergir. São 95 conferências.
 
 ### Quatro comandos conferem sozinhos
 
