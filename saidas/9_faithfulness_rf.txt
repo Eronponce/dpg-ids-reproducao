@@ -1,0 +1,57 @@
+lendo dados/dataset_balanceado_label.csv
+  floresta conferida, acuracia 0.905852231163131
+
+conferindo o atalho numa floresta de 3 arvores e 5000 amostras
+DPG initialized with perc_var=0.0, decimal_threshold=2, n_jobs=-1, graph_construction_mode=aggregated_transitions
+
+Starting DPG extraction *****************************************
+Model Class: RandomForestClassifier
+Model Class Module: sklearn.ensemble._forest
+Model Estimators:  3
+Model Params:  {'bootstrap': True, 'ccp_alpha': 0.0, 'class_weight': None, 'criterion': 'gini', 'max_depth': 6, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 3, 'n_jobs': None, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+*****************************************************************
+Total of paths: 15000
+Building DPG...
+Extracting graph...
+DPG initialized with perc_var=0.0, decimal_threshold=2, n_jobs=-1, graph_construction_mode=aggregated_transitions
+
+Starting DPG extraction *****************************************
+Model Class: RandomForestClassifier
+Model Class Module: sklearn.ensemble._forest
+Model Estimators:  3
+Model Params:  {'bootstrap': True, 'ccp_alpha': 0.0, 'class_weight': None, 'criterion': 'gini', 'max_depth': 6, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 3, 'n_jobs': None, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+*****************************************************************
+Total of paths: 15000
+Building DPG...
+Extracting graph...
+  grafo de 201 nos: as cinco partes sao identicas com a tabela da biblioteca
+  e com a tabela em zero
+
+construindo o DPG sem poda, perc_var=0 e decimal_threshold=2
+DPG initialized with perc_var=0.0, decimal_threshold=2, n_jobs=-1, graph_construction_mode=aggregated_transitions
+
+Starting DPG extraction *****************************************
+Model Class: RandomForestClassifier
+Model Class Module: sklearn.ensemble._forest
+Model Estimators:  20
+Model Params:  {'bootstrap': True, 'ccp_alpha': 0.0, 'class_weight': 'balanced', 'criterion': 'gini', 'max_depth': 16, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 2, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 20, 'n_jobs': None, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+*****************************************************************
+Total of paths: 1093540
+Building DPG...
+Extracting graph...
+
+========================================================================
+CORRECTNESS QUE SAI DA PROPRIA DPG, em 300 amostras de teste
+========================================================================
+  grafo de 21535 nos e 67311 arestas
+  output_fidelity        0.9767   texto 0.9767   CONFERE
+  mean_node_recall       0.9999   texto 0.9999   CONFERE
+  mean_node_precision    1.0000   texto 1.0000   CONFERE
+  mean_edge_recall       0.9290   texto 0.9290   CONFERE
+  mean_edge_precision    1.0000   texto 1.0000   CONFERE
+
+  gravado dados/rf_faithfulness.json
+
+  AVISO DA PROPRIA BIBLIOTECA, e ele vai para o texto: o escore composto
+  e um resumo heuristico e nao uma probabilidade calibrada. Reporte as
+  partes nomeadas, nao o composto sozinho.

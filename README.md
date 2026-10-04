@@ -32,7 +32,7 @@ Python 3.10 ou mais novo.
 | 6 | `python 6_class_bounds_rf.py` | os *class bounds* do cenário supervisionado, reexecutando o DPG | lento |
 | 7 | `python 7_rankings_rf.py` | as ordenações por classe do supervisionado, por alcance e por *betweenness* | ~5 s |
 | 8 | `python 8_reconstroi_grafos_if.py` | reconstrói os três grafos não supervisionados dos splits e confere contra os publicados | ~50 min por mistura |
-| 9 | `python 9_faithfulness_rf.py` | a Correctness que sai da própria DPG, sem medida inventada aqui | ~3 min |
+| 9 | `python 9_faithfulness_rf.py` | a Correctness que sai da própria DPG, sem medida inventada aqui, com autoconferência contra o texto | ~10 min |
 | 11 | `python 11_betweenness_topologia.py` | por que a *betweenness* do `ack_flag_number <= 0.59` é quase zero | ~10 s |
 | 12 | `python 12_spoofing.py` | a evidência da subseção de Spoofing | ~10 s |
 | 16 | `python 16_medidas_dissertacao.py` | recalcula do dataset cada número medido do Capítulo 4 e compara com o publicado | ~40 s |
@@ -122,6 +122,16 @@ Spoofing e 9 em Reconnaissance. 36 das 77 com intervalo fechado dos dois lados.
 mais central por alcance e por betweenness é o mesmo; nas outras duas as
 medidas apontam para predicados diferentes.
 
+**Correctness,** em 300 amostras de teste. Para esta medida a DPG é construída
+sem poda, com `perc_var = 0`, e tem 21.535 nós e 67.311 arestas.
+
+| medida | valor |
+|---|---|
+| fidelidade de saída | 0,9767 |
+| recall de nó | 0,9999 |
+| recall de aresta | 0,9290 |
+| precisão de nó e de aresta | 1,0000 |
+
 ### Cenário não supervisionado, Isolation Forest
 
 Três misturas, cinquenta árvores de isolamento, contaminação 0,01, semente 42.
@@ -171,7 +181,7 @@ sua origem.
 
 | arquivo | o que é | origem |
 |---|---|---|
-| `CHECKSUMS.sha256` | o SHA-256 dos 29 arquivos de `dados/`, para conferir a cópia | gerado em 08/09/2026 |
+| `CHECKSUMS.sha256` | o SHA-256 dos 29 arquivos de `dados/`, para conferir a cópia | gerado em 08/09/2026, com o do `rf_faithfulness.json` refeito em 04/10/2026 |
 | `dataset_balanceado_label.csv` | 68.347 linhas, 39 features e o rótulo em quatro macroclasses | derivado do `Merged01.csv` do CICIoT2023 |
 | `rf_grafo_nos.csv` | métricas por nó do grafo supervisionado, 479 nós, com alcance e *betweenness* | saída da biblioteca DPG |
 | `rf_grafo_arestas.csv` | as 758 arestas do mesmo grafo, com o peso de co-ocorrência | saída da biblioteca DPG |
@@ -179,6 +189,7 @@ sua origem.
 | `rf_rankings_por_classe.csv` | cada predicado com sua classe e sua posição por alcance e por *betweenness* | gerado pelo comando 7 |
 | `rf_class_bounds.csv` | o intervalo de cada feature por classe, 77 linhas em quatro comunidades | gerado pelo comando 6 |
 | `rf_predicados_por_classe.csv` | quantos predicados cada classe usa de cada feature | gerado pelo comando 6 |
+| `rf_faithfulness.json` | as cinco partes da Correctness, com o tamanho da DPG em que foram medidas | gerado pelo comando 9 |
 | `if_{single,dupla,trio}_nos.csv` | métricas por nó dos três grafos não supervisionados, 76 nós, com o *IOP-Score* | saída da DPG-iForest, execuções de 04/09/2026 |
 | `if_{single,dupla,trio}_arestas.csv` | as arestas dos mesmos grafos | saída da DPG-iForest |
 | `if_{single,dupla,trio}_comunidades.csv` | os agrupamentos dos mesmos grafos | saída da DPG-iForest |
@@ -188,7 +199,7 @@ sua origem.
 | `splits_if/{single,dupla,trio}_test_fixed_BEN05.csv` | os splits de teste, 24.051 na simples e 31.542 na dupla e na tripla | idem |
 
 Em `saidas/` está o stdout integral de cada um dos sete comandos, na
-execução de 08/09/2026.
+execução de 08/09/2026. O do comando 9 é da execução de 04/10/2026.
 
 O `dataset_balanceado_label.csv` é o arquivo exato de onde saiu o grafo do
 capítulo, e não uma reconstrução. É o que permite que a acurácia bata na décima
@@ -275,7 +286,8 @@ train_test_split(X, y, test_size=0.2, random_state=42)   # sem estratificar
 
 Parâmetros da extração do DPG supervisionado: `perc_var = 0,001`,
 `decimal_threshold = 2`, modo `aggregated_transitions` e limiar de agrupamento
-`0,2`.
+`0,2`. A Correctness do comando 9 usa a mesma extração sem poda, com
+`perc_var = 0`.
 
 O cenário não supervisionado usa cinquenta árvores de isolamento, contaminação
 de 0,01, semente 42, partição 70/30 e predicados de dois elementos, sobre as 39
